@@ -1,22 +1,25 @@
 import { Routes, Route } from 'react-router-dom'
+import { Box } from '@chakra-ui/react'
 import Home from './pages/Home'
-import News from './pages/News'
 import Contact from './pages/Contact'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import Schedule from './pages/Schedule'
 
-export default function App() {
+function App() {
   return (
-    <div className="app">
+    <Box minH="100vh" display="flex" flexDirection="column">
       <Header />
-      <main className="container">
+      <Box flex="1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/scedule" element={<Schedule />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </main>
+      </Box>
       <Footer />
-    </div>
+    </Box>
   )
 }
+
+export default App
