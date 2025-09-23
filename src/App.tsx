@@ -13,7 +13,7 @@ function App() {
       <Box flex="1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/scedule" element={<Schedule />} />
+          <Route path="/schedule" element={<Schedule />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Box>
