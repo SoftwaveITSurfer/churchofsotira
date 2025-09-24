@@ -1,20 +1,68 @@
 import { useEffect, useState } from 'react'
 import { Box, Text } from '@chakra-ui/react'
 
+/**
+ * Generic Map Component using OpenStreetMap and Leaflet
+ * 
+ * Usage Examples:
+ * 
+ * // Basic usage (church default location)
+ * <Map />
+ * 
+ * // Custom location with all details
+ * <Map 
+ *   lat={35.1675}
+ *   lng={33.3823}
+ *   zoom={12}
+ *   height="400px"
+ *   markerText="Λευκωσία"
+ *   address="Κεντρική Πλατεία"
+ *   city="Λευκωσία"
+ *   country="Κύπρος"
+ * />
+ * 
+ * // Simple marker without popup
+ * <Map 
+ *   lat={34.7767}
+ *   lng={32.4239}
+ *   showPopup={false}
+ *   markerText="Λάρνακα"
+ * />
+ * 
+ * // Interactive map with scroll zoom
+ * <Map 
+ *   scrollWheelZoom={true}
+ *   zoom={10}
+ *   height="500px"
+ * />
+ */
+
 interface MapProps {
     height?: string
     lat?: number
     lng?: number
     zoom?: number
     markerText?: string
+    address?: string
+    city?: string
+    country?: string
+    showPopup?: boolean
+    scrollWheelZoom?: boolean
+    showZoomControl?: boolean
 }
 
 export const Map: React.FC<MapProps> = ({
     height = "300px",
-    lat = 35.028262,
-    lng = 33.953331,
-    zoom = 15,
-    markerText = "Εκκλησία Σωτήρας Αμμοχώστου"
+    lat,
+    lng,
+    zoom,
+    markerText = "",
+    address = "",
+    city = "",
+    country = "",
+    showPopup = true,
+    scrollWheelZoom = false,
+    showZoomControl = true
 }) => {
     const [isLoaded, setIsLoaded] = useState(false)
     const [MapComponents, setMapComponents] = useState<any>(null)
@@ -84,26 +132,35 @@ export const Map: React.FC<MapProps> = ({
                 center={[lat, lng]}
                 zoom={zoom}
                 style={{ height: '100%', width: '100%' }}
-                scrollWheelZoom={false}
-                zoomControl={true}
+                scrollWheelZoom={scrollWheelZoom}
+                zoomControl={showZoomControl}
             >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 <Marker position={[lat, lng]}>
-                    <Popup maxWidth={200} minWidth={150}>
-                        <div style={{ padding: '8px' }}>
-                            <strong style={{ fontSize: '14px' }}>
-                                {markerText}
-                            </strong>
-                            <br />
-                            <span style={{ fontSize: '12px' }}>
-                                Κεντρική Πλατεία Αμμοχώστου<br />
-                                5330 Αμμόχωστος, Κύπρος
-                            </span>
-                        </div>
-                    </Popup>
+                    {showPopup && (
+                        <Popup maxWidth={200} minWidth={150}>
+                            <div style={{ padding: '8px' }}>
+                                <strong style={{ fontSize: '14px' }}>
+                                    {markerText}
+                                </strong>
+                                {(address || city || country) && (
+                                    <>
+                                        <br />
+                                        <span style={{ fontSize: '12px' }}>
+                                            {address && `${address}`}
+                                            {address && (city || country) && <br />}
+                                            {city && `${city}`}
+                                            {city && country && ', '}
+                                            {country}
+                                        </span>
+                                    </>
+                                )}
+                            </div>
+                        </Popup>
+                    )}
                 </Marker>
             </MapContainer>
         </Box>

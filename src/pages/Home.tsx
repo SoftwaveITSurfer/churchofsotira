@@ -5,7 +5,7 @@ export default function Home() {
     <>
       {/* Hero με background */}
       <Box
-        backgroundImage="url('/src/images/churchs/church-bg.jpg')"
+        backgroundImage="url('/images/churches/church-bg.jpg')"
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
