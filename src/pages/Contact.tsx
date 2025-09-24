@@ -91,7 +91,16 @@ export default function Contact() {
                 </Heading>
 
                 {/* Interactive Map */}
-                <Map height="400px" markerText="Εκκλησία Σωτήρας Αμμοχώστου" />
+                <Map
+                  lat={35.028262}
+                  lng={33.953331}
+                  zoom={15}
+                  markerText="Εκκλησία Σωτήρας Αμμοχώστου"
+                  address="Κεντρική Πλατεία Αμμοχώστου"
+                  city="Σωτήρα Αμμοχώστου"
+                  country="Κύπρος"
+                  height="400px"
+                />
 
                 <Text mt={4} textAlign="center" color="gray.600">
                   Βρισκόμαστε στην καρδιά της Αμμοχώστου, κοντά στην κεντρική πλατεία.
