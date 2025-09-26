@@ -1,0 +1,120 @@
+{
+  "churches": [
+    {
+      "id": "metamorfosis-sotiros",
+      "name": "Μεταμόρφωση του Σωτήρος",
+      "nameEn": "Metamorphosis of the Savior",
+      "description": "Κύριος ναός της κοινότητας, μνημείο του 16ου αιώνα κτισμένο πάνω σε θεμέλια παλαιότερης βυζαντινής βασιλικής.",
+      "period": "16ος αιώνας",
+      "status": "Ενεργός",
+      "image": "/images/churches/metamorfosis-church.jpg",
+      "location": {
+        "lat": 35.027125,
+        "lng": 33.952617,
+        "address": "Κεντρική Πλατεία Σωτήρας"
+      },
+      "features": [
+        "Κύριος ναός της κοινότητας",
+        "Βυζαντινά θεμέλια",
+        "Ιστορικό μνημείο",
+        "Ενεργή λειτουργία"
+      ]
+    },
+    {
+      "id": "agios-mamas",
+      "name": "Άγιος Μάμας",
+      "nameEn": "Saint Mamas",
+      "description": "Ιστορική εκκλησία πιθανότατα του 16ου αιώνα, αφιερωμένη στον Άγιο Μάμα, προστάτη των ζώων.",
+      "period": "16ος αιώνας",
+      "status": "Ενεργός",
+      "image": "/images/churches/agios-mamas-chapel.jpg",
+      "location": {
+        "lat": 35.028500,
+        "lng": 33.951000,
+        "address": "Περιοχή Σωτήρας"
+      },
+      "features": [
+        "Προστάτης των ζώων",
+        "Αρχιτεκτονική 16ου αιώνα",
+        "Τοπική λαϊκή λατρεία"
+      ]
+    },
+    {
+      "id": "agia-varvara",
+      "name": "Αγία Βαρβάρα",
+      "nameEn": "Saint Barbara",
+      "description": "Εκκλησία τέλους 14ου – αρχών 15ου αιώνα, αφιερωμένη στην Αγία Βαρβάρα, προστάτιδα από τους κεραυνούς.",
+      "period": "14ος-15ος αιώνας",
+      "status": "Ιστορικό μνημείο",
+      "image": "/images/churches/agia-varvara-chapel.jpg",
+      "location": {
+        "lat": 35.026800,
+        "lng": 33.953200,
+        "address": "Ανατολικά της Σωτήρας"
+      },
+      "features": [
+        "Παλαιότερο μνημείο",
+        "Προστασία από κεραυνούς",
+        "Σπάνια αρχιτεκτονική"
+      ]
+    },
+    {
+      "id": "agios-georgios",
+      "name": "Άγιος Γεώργιος",
+      "nameEn": "Saint George",
+      "description": "Εκκλησία δυτικά του χωριού που στεγάζει το Εκκλησιαστικό Μουσείο Σωτήρας με σπουδαίους θησαυρούς.",
+      "period": "Παραδοσιακή",
+      "status": "Μουσείο",
+      "image": "/images/churches/ecclesiastical-museum-agios-georgios.jpg",
+      "location": {
+        "lat": 35.027000,
+        "lng": 33.950500,
+        "address": "Δυτικά του χωριού"
+      },
+      "features": [
+        "Εκκλησιαστικό Μουσείο",
+        "Εικόνες 15ου αιώνα",
+        "Παλαιά Ευαγγέλια",
+        "Ξύλινο τέμπλο 16ου αιώνα"
+      ]
+    },
+    {
+      "id": "panagia-chordakiotissa",
+      "name": "Παναγία η Χορδακιώτισσα",
+      "nameEn": "Panagia Chordakiotissa",
+      "description": "Ιδιαίτερα τιμώμενος ναός της περιοχής, αφιερωμένος στην Παναγία, με έντονη λαϊκή λατρεία.",
+      "period": "Παραδοσιακή",
+      "status": "Ενεργός",
+      "image": "/images/churches/panagia-chordakiotissa-chapel.jpg",
+      "location": {
+        "lat": 35.025500,
+        "lng": 33.954000,
+        "address": "Περιοχή Χορτάκια"
+      },
+      "features": [
+        "Ιδιαίτερη λαϊκή λατρεία",
+        "Θαυματουργός εικόνα",
+        "Ετήσιο προσκύνημα"
+      ]
+    },
+    {
+      "id": "agios-theodoros",
+      "name": "Άγιος Θεόδωρος (Ερείπια)",
+      "nameEn": "Saint Theodore (Ruins)",
+      "description": "Ερείπια αρχαίας εκκλησίας στη θέση Χορτάκια, μαρτυρία της πλούσιας εκκλησιαστικής κληρονομιάς της περιοχής.",
+      "period": "Βυζαντινή",
+      "status": "Ερείπια",
+      "image": "/images/churches/agios-theodoros-chapel.jpg",
+      "location": {
+        "lat": 35.024800,
+        "lng": 33.955500,
+        "address": "Θέση Χορτάκια"
+      },
+      "features": [
+        "Αρχαιολογικά ερείπια",
+        "Βυζαντινή περίοδος",
+        "Ιστορική σημασία"
+      ]
+    }
+  ]
+}

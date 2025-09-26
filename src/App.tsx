@@ -7,6 +7,7 @@ import { Footer } from './components/Footer'
 import Schedule from './pages/Schedule'
 import CatecheticalMeetings from './pages/CatecheticalMeetings'
 import Gallery from './pages/Gallery'
+import Churches from './pages/Churches'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/catechetical" element={<CatecheticalMeetings />} />
+          <Route path="/churches" element={<Churches />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

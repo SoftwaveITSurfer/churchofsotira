@@ -16,7 +16,7 @@ export const Header = () => {
     { to: "/", label: "Κεντρική", end: true },
     { to: "/schedule", label: "Πρόγραμμα" },
     { to: "/catechetical", label: "Κατηχητικές" },
-    { to: "/", label: "Ναοί" },
+    { to: "/churches", label: "Ναοί" },
     { to: "/contact", label: "Επικοινωνία" }
   ]
 
