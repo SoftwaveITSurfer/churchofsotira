@@ -14,6 +14,7 @@ import {
     SkeletonText
 } from "@chakra-ui/react";
 import { FaMapMarkerAlt, FaHistory, FaStar } from "react-icons/fa";
+import ChurchModal from "../components/ChurchModal";
 
 interface Church {
     id: string;
@@ -35,6 +36,8 @@ const Churches: React.FC = () => {
     const navigate = useNavigate();
     const [churches, setChurches] = useState<Church[]>([]);
     const [loading, setLoading] = useState(true);
+    const [selectedChurch, setSelectedChurch] = useState<Church | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const bgColor = "white";
     const borderColor = "gray.200";
 
@@ -54,8 +57,14 @@ const Churches: React.FC = () => {
         loadChurches();
     }, []);
 
-    const handleChurchClick = (id: string) => {
-        navigate(`/churches/${id}`);
+    const handleChurchClick = (church: Church) => {
+        setSelectedChurch(church);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setSelectedChurch(null);
     };
 
     const getStatusColor = (status: string) => {
@@ -141,7 +150,7 @@ const Churches: React.FC = () => {
                                     transform: "translateY(-8px)",
                                     shadow: "2xl"
                                 }}
-                                onClick={() => handleChurchClick(church.id)}
+                                onClick={() => handleChurchClick(church)}
                             >
                                 <Image
                                     src={church.image}
@@ -263,6 +272,13 @@ const Churches: React.FC = () => {
                     </Box>
                 </Container>
             </Box>
+
+            {/* Church Modal */}
+            <ChurchModal
+                church={selectedChurch}
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+            />
         </>
     );
 };
