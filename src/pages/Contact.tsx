@@ -83,21 +83,16 @@ export default function Contact() {
           </Box>
 
           {/* Map Section */}
-          <Box mt={8} bg="white" p={6} borderRadius="lg" shadow="md">
+          <Box mt={8}>
             <Heading size="md" color="blue.600" mb={4} textAlign="center">
               Πώς να μας βρείτε
             </Heading>
 
-            {/* Interactive Map */}
+            {/* Google Maps Embed */}
             <Map
-              lat={35.028262}
-              lng={33.953331}
-              zoom={15}
+              googleMapsEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.728800431289!2d33.95286981466366!3d35.02821135037582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfcf6d2f32fc21%3A0x4bf9877943394329!2zzpnOtc-Bz4zPgiDOnc6xz4zPgiDOnM61z4TOsc68zr_Pgc-Gz47Pg861z4nPgg!5e1!3m2!1sel!2sgr!4v1759002160246!5m2!1sel!2sgr"
+              height="450px"
               markerText="Εκκλησία Σωτήρας Αμμοχώστου"
-              address="Κεντρική Πλατεία Αμμοχώστου"
-              city="Σωτήρα Αμμοχώστου"
-              country="Κύπρος"
-              height="400px"
             />
 
             <Text mt={4} textAlign="center" color="gray.600">
