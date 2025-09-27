@@ -8,10 +8,12 @@ import Schedule from './pages/Schedule'
 import CatecheticalMeetings from './pages/CatecheticalMeetings'
 import Gallery from './pages/Gallery'
 import Churches from './pages/Churches'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Box minH="100vh" display="flex" flexDirection="column">
+      <ScrollToTop />
       <Header />
       <Box flex="1">
         <Routes>
