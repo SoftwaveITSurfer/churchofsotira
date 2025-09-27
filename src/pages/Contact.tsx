@@ -41,7 +41,7 @@ export default function Contact() {
 
   return (
     <Box py={12} bg="gray.50" minH="80vh">
-      <Container maxW="1200px">
+      <Container maxW="800px">
         {/* Header Section */}
         <Box textAlign="center" mb={12}>
           <Heading as="h1" size="2xl" color="blue.600" mb={4}>
@@ -53,65 +53,62 @@ export default function Contact() {
           </Text>
         </Box>
 
-        <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
-          {/* Contact Information */}
-          <GridItem>
-            <VStack gap={6} align="stretch">
-              <Box bg="white" p={6} borderRadius="lg" shadow="md">
-                <Heading size="md" color="blue.600" mb={4}>
-                  Στοιχεία Επικοινωνίας
-                </Heading>
-                <VStack align="start" gap={3}>
-                  <Box>
-                    <Text fontWeight="bold" color="gray.700">Διεύθυνση:</Text>
-                    <Text color="gray.600">
-                      Κεντρική Πλατεία Αμμοχώστου<br />
-                      5330 Αμμόχωστος, Κύπρος
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Text fontWeight="bold" color="gray.700">Τηλέφωνο:</Text>
-                    <Link href="tel:+35723721234" color="blue.500">
-                      +357 23 72 1234
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Text fontWeight="bold" color="gray.700">Email:</Text>
-                    <Link href="mailto:info@churchofsotira.cy" color="blue.500">
-                      info@churchofsotira.cy
-                    </Link>
-                  </Box>
-                </VStack>
-              </Box>
-
-              {/* Map Section */}
-              <Box mt={8} bg="white" p={6} borderRadius="lg" shadow="md">
-                <Heading size="md" color="blue.600" mb={4} textAlign="center">
-                  Πώς να μας βρείτε
-                </Heading>
-
-                {/* Interactive Map */}
-                <Map
-                  lat={35.028262}
-                  lng={33.953331}
-                  zoom={15}
-                  markerText="Εκκλησία Σωτήρας Αμμοχώστου"
-                  address="Κεντρική Πλατεία Αμμοχώστου"
-                  city="Σωτήρα Αμμοχώστου"
-                  country="Κύπρος"
-                  height="400px"
-                />
-
-                <Text mt={4} textAlign="center" color="gray.600">
-                  Βρισκόμαστε στην καρδιά της Αμμοχώστου, κοντά στην κεντρική πλατεία.
-                  Υπάρχει δημόσιος χώρος στάθμευσης.
+        {/* Contact Information */}
+        <VStack gap={6} align="stretch">
+          <Box bg="white" p={8} borderRadius="lg" shadow="md" maxW="600px" mx="auto">
+            <Heading size="md" color="blue.600" mb={6} textAlign="center">
+              Στοιχεία Επικοινωνίας
+            </Heading>
+            <VStack align="center" gap={4}>
+              <Box textAlign="center">
+                <Text fontWeight="bold" color="gray.700">Διεύθυνση:</Text>
+                <Text color="gray.600">
+                  Κεντρική Πλατεία Αμμοχώστου<br />
+                  5330 Αμμόχωστος, Κύπρος
                 </Text>
               </Box>
+              <Box textAlign="center">
+                <Text fontWeight="bold" color="gray.700">Τηλέφωνο:</Text>
+                <Link href="tel:+35723721234" color="blue.500">
+                  +357 23 72 1234
+                </Link>
+              </Box>
+              <Box textAlign="center">
+                <Text fontWeight="bold" color="gray.700">Email:</Text>
+                <Link href="mailto:info@churchofsotira.cy" color="blue.500">
+                  info@churchofsotira.cy
+                </Link>
+              </Box>
             </VStack>
-          </GridItem>
+          </Box>
 
-          {/* Contact Form */}
-          <GridItem>
+          {/* Map Section */}
+          <Box mt={8} bg="white" p={6} borderRadius="lg" shadow="md">
+            <Heading size="md" color="blue.600" mb={4} textAlign="center">
+              Πώς να μας βρείτε
+            </Heading>
+
+            {/* Interactive Map */}
+            <Map
+              lat={35.028262}
+              lng={33.953331}
+              zoom={15}
+              markerText="Εκκλησία Σωτήρας Αμμοχώστου"
+              address="Κεντρική Πλατεία Αμμοχώστου"
+              city="Σωτήρα Αμμοχώστου"
+              country="Κύπρος"
+              height="400px"
+            />
+
+            <Text mt={4} textAlign="center" color="gray.600">
+              Βρισκόμαστε στην καρδιά της Αμμοχώστου, κοντά στην κεντρική πλατεία.
+              Υπάρχει δημόσιος χώρος στάθμευσης.
+            </Text>
+          </Box>
+        </VStack>
+
+        {/* Contact Form */}
+        {/* <GridItem>
             <Box bg="white" p={6} borderRadius="lg" shadow="md">
               <Heading size="md" color="blue.600" mb={6}>
                 Στείλτε μας μήνυμα
@@ -201,8 +198,7 @@ export default function Contact() {
                 </VStack>
               </form>
             </Box>
-          </GridItem>
-        </Grid>
+          </GridItem> */}
       </Container>
     </Box>
   )

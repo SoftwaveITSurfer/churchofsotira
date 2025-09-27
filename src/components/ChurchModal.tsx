@@ -24,8 +24,7 @@ interface Church {
     status: string;
     image: string;
     location: {
-        lat: number;
-        lng: number;
+        map: string;
         address: string;
     };
     features: string[];
@@ -51,7 +50,7 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
     };
 
     const handleDirections = () => {
-        const url = `https://www.google.com/maps/search/?api=1&query=${church.location.lat},${church.location.lng}`;
+        const url = church.location.map;
         window.open(url, '_blank');
     };
 

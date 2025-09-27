@@ -84,11 +84,7 @@ export default function Home() {
 
           <Box
             bg="white"
-            borderRadius="xl"
-            p={{ base: 6, md: 10 }}
-            shadow="lg"
-            border="1px"
-            borderColor="gray.200"
+            minH="400px"
           >
             <Text
               fontSize={{ base: "md", md: "lg" }}
