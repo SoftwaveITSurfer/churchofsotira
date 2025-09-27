@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Map } from "../components/Map";
 import { Box, Container, Heading, Text, Button, Flex } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { Map } from "../components/Map";
 import AboutSection from "../components/catechetical/AboutSection";
 import BandSection from "../components/catechetical/BandSection";
 import TheaterSection from "../components/catechetical/TheaterSection";
@@ -187,17 +187,16 @@ const CatecheticalMeetings: React.FC = () => {
                             Εδώ φιλοξενούνται όλες οι δραστηριότητές μας και περιμένουμε να σας υποδεχτούμε!
                         </Text>
                     </Box>
+
+                    {/* Google Maps Embed */}
                     <Map
-                        lat={35.027125}
-                        lng={33.952617}
-                        zoom={15}
-                        height="350px"
-                        markerText="Κατηχητικές Συνάξεις"
-                        city="Σωτήρα Αμμοχώστου"
-                        country="Κύπρος"
+                        googleMapsEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3511241010661!2d33.95238204448627!3d35.02726365609426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfcf12b33c5ed9%3A0x670a8cab4967f491!2zzpvOtc-Jz4YuIM6czrHOus6xz4HOr86_z4UgzpMgOCwgzqPPic-Ezq7Pgc6xIDUzOTAsIM6az43PgM-Bzr_Pgg!5e1!3m2!1sel!2sgr!4v1759001707547!5m2!1sel!2sgr"
+                        height="450px"
+                        markerText="Κατηχητικές Συνάξεις Σωτήρας"
                     />
                 </section>
 
+                {/*
                 <Box textAlign="center" mt={8}>
                     <Button
                         onClick={() => navigate('/gallery')}
@@ -211,6 +210,7 @@ const CatecheticalMeetings: React.FC = () => {
                         Δείτε τη Συλλογή μας
                     </Button>
                 </Box>
+                */}
             </div>
         </>
     );
