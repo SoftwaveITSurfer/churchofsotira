@@ -25,8 +25,7 @@ interface Church {
     status: string;
     image: string;
     location: {
-        lat: number;
-        lng: number;
+        map: string;
         address: string;
     };
     features: string[];

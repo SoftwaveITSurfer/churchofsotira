@@ -1,16 +1,15 @@
 {
   "churches": [
     {
-      "id": "metamorfosis-sotiros",
-      "name": "Μεταμόρφωση του Σωτήρος",
-      "nameEn": "Metamorphosis of the Savior",
+      "id": "metamorfosis-sotiros-old",
+      "name": "Παλιός Ναός Μεταμορφώσεως του Σωτήρος",
+      "nameEn": "Old Church Metamorphosis of the Savior",
       "description": "Κύριος ναός της κοινότητας, μνημείο του 16ου αιώνα κτισμένο πάνω σε θεμέλια παλαιότερης βυζαντινής βασιλικής.",
       "period": "16ος αιώνας",
       "status": "Ενεργός",
-      "image": "/images/churches/metamorfosis-church.jpg",
+      "image": "/images/churches/metamorfosis-church-old.jpg",
       "location": {
-        "lat": 35.027125,
-        "lng": 33.952617,
+        "map": "https://maps.app.goo.gl/8ErD5Lw6bf951MnE7",
         "address": "Κεντρική Πλατεία Σωτήρας"
       },
       "features": [
@@ -29,8 +28,7 @@
       "status": "Ενεργός",
       "image": "/images/churches/agios-mamas-chapel.jpg",
       "location": {
-        "lat": 35.028500,
-        "lng": 33.951000,
+        "map": "https://maps.app.goo.gl/cgSPCRXZBcYxfvWe7",
         "address": "Περιοχή Σωτήρας"
       },
       "features": [
@@ -48,8 +46,7 @@
       "status": "Ιστορικό μνημείο",
       "image": "/images/churches/agia-varvara-chapel.jpg",
       "location": {
-        "lat": 35.026800,
-        "lng": 33.953200,
+        "map": "https://maps.app.goo.gl/5XXAfBWidsvMm44R7?g_st=av",
         "address": "Ανατολικά της Σωτήρας"
       },
       "features": [
@@ -67,8 +64,7 @@
       "status": "Μουσείο",
       "image": "/images/churches/ecclesiastical-museum-agios-georgios.jpg",
       "location": {
-        "lat": 35.027000,
-        "lng": 33.950500,
+        "map": "https://maps.app.goo.gl/VFkewiWkuEd5e7ns5?g_st=av",
         "address": "Δυτικά του χωριού"
       },
       "features": [
@@ -87,8 +83,7 @@
       "status": "Ενεργός",
       "image": "/images/churches/panagia-chordakiotissa-chapel.jpg",
       "location": {
-        "lat": 35.025500,
-        "lng": 33.954000,
+        "map": "https://maps.app.goo.gl/vcKJZFYEgJHSgA8j8?g_st=av",
         "address": "Περιοχή Χορτάκια"
       },
       "features": [
@@ -99,21 +94,167 @@
     },
     {
       "id": "agios-theodoros",
-      "name": "Άγιος Θεόδωρος (Ερείπια)",
-      "nameEn": "Saint Theodore (Ruins)",
+      "name": "Άγιος Θεόδωρος",
+      "nameEn": "Saint Theodore",
       "description": "Ερείπια αρχαίας εκκλησίας στη θέση Χορτάκια, μαρτυρία της πλούσιας εκκλησιαστικής κληρονομιάς της περιοχής.",
       "period": "Βυζαντινή",
       "status": "Ερείπια",
       "image": "/images/churches/agios-theodoros-chapel.jpg",
       "location": {
-        "lat": 35.024800,
-        "lng": 33.955500,
-        "address": "Θέση Χορτάκια"
+        "map": "https://maps.app.goo.gl/fwYU5H7dyj9hg4gp8?g_st=av",
+        "address": "Περιοχή Χορτάκια"
       },
       "features": [
-        "Αρχαιολογικά ερείπια",
-        "Βυζαντινή περίοδος",
-        "Ιστορική σημασία"
+        "Αρχαία εκκλησία",
+        "Βυζαντινή κληρονομιά",
+        "Αρχαιολογικό ενδιαφέρον"
+      ]
+    },
+    {
+      "id": "metamorfosis-sotiros-new",
+      "name": "Ι.Ν. Μεταμορφώσεως του Σωτήρος (Νέος)",
+      "nameEn": "New Church Metamorphosis of the Savior",
+      "description": "Ο νέος ναός της Μεταμορφώσεως του Σωτήρος, σύγχρονη εκκλησία που εξυπηρετεί τις ανάγκες της κοινότητας.",
+      "period": "Σύγχρονη",
+      "status": "Ενεργός",
+      "image": "/images/churches/metamorfosis-church.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/p1DHuQwzFjR2tEdDA?g_st=av",
+        "address": "Σωτήρα Αμμοχώστου"
+      },
+      "features": [
+        "Νέος ναός",
+        "Σύγχρονη αρχιτεκτονική",
+        "Ενεργή λειτουργία",
+        "Κοινοτικός ναός"
+      ]
+    },
+    {
+      "id": "anastaseos",
+      "name": "Ι.Ν. Αναστάσεως",
+      "nameEn": "Resurrection Church",
+      "description": "Εκκλησία αφιερωμένη στην Ανάσταση του Χριστού, σημαντικός ναός της κοινότητας.",
+      "period": "Σύγχρονη",
+      "status": "Ενεργός",
+      "image": "/images/churches/resurrection-church.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/WCkPCui3rdJ6uobeA?g_st=av",
+        "address": "Σωτήρα Αμμοχώστου"
+      },
+      "features": [
+        "Αφιερωμένη στην Ανάσταση",
+        "Κοινοτικός ναός",
+        "Ενεργή λειτουργία"
+      ]
+    },
+    {
+      "id": "agia-paraskevi-agioi-rafael",
+      "name": "Εξωκλήσι Αγίας Παρασκευής και Αγίων Ραφαήλ Νικολάου και Ειρήνης",
+      "nameEn": "Chapel of Saint Paraskevi and Saints Rafael, Nikolaos and Irene",
+      "description": "Εξωκλήσι αφιερωμένο στην Αγία Παρασκευή και στους Αγίους Ραφαήλ, Νικόλαο και Ειρήνη.",
+      "period": "Παραδοσιακή",
+      "status": "Ενεργός",
+      "image": "/images/churches/agia-paraskevi-chapel.png",
+      "location": {
+        "map": "https://maps.app.goo.gl/zLC1g7bYvAq4jnVU7?g_st=av",
+        "address": "Περιοχή Σωτήρας"
+      },
+      "features": [
+        "Πολυαφιερωμένο εξωκλήσι",
+        "Αγίοι Ραφαήλ Νικόλαος Ειρήνη",
+        "Παραδοσιακή αρχιτεκτονική"
+      ]
+    },
+    {
+      "id": "agios-nikandros",
+      "name": "Εξωκλήσι Αγίου Νικάνδρου",
+      "nameEn": "Chapel of Saint Nikandros",
+      "description": "Εξωκλήσι αφιερωμένο στον Άγιο Νίκανδρο, σπάνια αφιέρωση στην κυπριακή εκκλησιαστική παράδοση.",
+      "period": "Παραδοσιακή",
+      "status": "Ενεργός",
+      "image": "/images/churches/agios-nikandros-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/nnBnQWqjw9rfkqHg8?g_st=ac",
+        "address": "Περιοχή Σωτήρας"
+      },
+      "features": [
+        "Σπάνια αφιέρωση",
+        "Τοπική λατρεία",
+        "Παραδοσιακή αρχιτεκτονική"
+      ]
+    },
+    {
+      "id": "agios-antonios-new-old",
+      "name": "Εξωκλήσι Αγίου Αντωνίου (Νέος και Παλαιός)",
+      "nameEn": "Chapel of Saint Anthony (New and Old)",
+      "description": "Σύμπλεγμα εξωκκλησιών του Αγίου Αντωνίου, περιλαμβάνει τόσο τον παλαιό όσο και τον νέο ναό.",
+      "period": "Παραδοσιακή/Σύγχρονη",
+      "status": "Ενεργός",
+      "image": "/images/churches/agios-antonios-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/v1948pdnuhjaMH8h7?g_st=av",
+        "address": "Περιοχή Σωτήρας"
+      },
+      "features": [
+        "Δύο ναοί σε ένα",
+        "Παλαιός και νέος ναός",
+        "Άγιος Αντώνιος",
+        "Ιστορική συνέχεια"
+      ]
+    },
+    {
+      "id": "agia-thekla",
+      "name": "Εξωκλήσι Αγίας Θέκλας",
+      "nameEn": "Chapel of Saint Thekla",
+      "description": "Εξωκλήσι αφιερωμένο στην Αγία Θέκλα, πρώτη μάρτυρα και ισαπόστολο.",
+      "period": "Παραδοσιακή",
+      "status": "Ενεργός",
+      "image": "/images/churches/agia_theklas_chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/1gzTu5bbaT7w4vT76?g_st=av",
+        "address": "Περιοχή Σωτήρας"
+      },
+      "features": [
+        "Πρώτη μάρτυρα",
+        "Ισαπόστολος",
+        "Γυναικεία προστάτιδα"
+      ]
+    },
+    {
+      "id": "agios-georgios-chortakia",
+      "name": "Εξωκλήσι Αγίου Γεωργίου Χορτακίων",
+      "nameEn": "Chapel of Saint George Chortakia",
+      "description": "Εξωκλήσι του Αγίου Γεωργίου στην περιοχή Χορτάκια, διαφορετικό από το μουσείο Αγίου Γεωργίου.",
+      "period": "Παραδοσιακή",
+      "status": "Ενεργός",
+      "image": "/images/churches/agios-georgios-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/9n1cD6r2WEQsJ97Z7?g_st=av",
+        "address": "Περιοχή Χορτάκια"
+      },
+      "features": [
+        "Στην περιοχή Χορτάκια",
+        "Άγιος Γεώργιος",
+        "Τοπική λατρεία"
+      ]
+    },
+    {
+      "id": "mouseio-agonos-mnimeio",
+      "name": "Μουσείο Αγώνος και Μνημείο Πεσόντων και Αγνοουμένων",
+      "nameEn": "Struggle Museum and Memorial of the Fallen and Missing",
+      "description": "Μουσείο αφιερωμένο στον αγώνα της ΕΟΚΑ και μνημείο προς τιμήν των πεσόντων και αγνοουμένων της Σωτήρας.",
+      "period": "Σύγχρονη",
+      "status": "Μουσείο/Μνημείο",
+      "image": "/images/churches/struggle-museum-memorial.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/GHzsrrF7KUz7yZseA?g_st=av",
+        "address": "Σωτήρα Αμμοχώστου"
+      },
+      "features": [
+        "Μουσείο ΕΟΚΑ",
+        "Μνημείο πεσόντων",
+        "Ιστορική μνήμη",
+        "Εθνικός αγώνας"
       ]
     }
   ]

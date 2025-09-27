@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Map } from "../components/Map";
-import { Box, Container, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Button, Flex } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import AboutSection from "../components/catechetical/AboutSection";
+import BandSection from "../components/catechetical/BandSection";
+import TheaterSection from "../components/catechetical/TheaterSection";
+import TraditionalDancesSection from "../components/catechetical/TraditionalDancesSection";
+import KatixitikoSection from "../components/catechetical/KatixitikoSection";
 
 const CatecheticalMeetings: React.FC = () => {
     const navigate = useNavigate();
+    const [activeSection, setActiveSection] = useState('about');
 
     return (
         <>
@@ -75,108 +81,85 @@ const CatecheticalMeetings: React.FC = () => {
                 </Container>
             </Box>
 
-            {/* About Us Section */}
+            {/* Sections */}
             <Box id="about-section" py={{ base: 12, md: 16 }} bg="gray.50">
                 <Container maxW="4xl" px={{ base: 4, md: 8 }}>
-                    <Heading
-                        as="h2"
-                        size={{ base: "lg", md: "xl" }}
-                        textAlign="center"
-                        mb={{ base: 8, md: 12 }}
-                        color="blue.600"
-                        fontWeight="bold"
-                    >
-                        Η Ιστορία μας
-                    </Heading>
 
+                    {/* Section Navigation Buttons */}
+                    <Flex
+                        justify="center"
+                        mb={8}
+                        wrap="wrap"
+                        gap={{ base: 2, md: 4 }}
+                        px={{ base: 2, md: 0 }}
+                    >
+                        <Button
+                            onClick={() => setActiveSection('about')}
+                            colorScheme={activeSection === 'about' ? 'blue' : 'gray'}
+                            variant={activeSection === 'about' ? 'solid' : 'outline'}
+                            size={{ base: "sm", md: "md" }}
+                            px={{ base: 4, md: 6 }}
+                            fontSize={{ base: "sm", md: "md" }}
+                            _hover={{ transform: "translateY(-2px)" }}
+                        >
+                            Η Ιστορία μας
+                        </Button>
+                        <Button
+                            onClick={() => setActiveSection('katixitiko')}
+                            colorScheme={activeSection === 'katixitiko' ? 'blue' : 'gray'}
+                            variant={activeSection === 'katixitiko' ? 'solid' : 'outline'}
+                            size={{ base: "sm", md: "md" }}
+                            px={{ base: 4, md: 6 }}
+                            fontSize={{ base: "sm", md: "md" }}
+                            _hover={{ transform: "translateY(-2px)" }}
+                        >
+                            Κατηχητικό
+                        </Button>
+                        <Button
+                            onClick={() => setActiveSection('banda')}
+                            colorScheme={activeSection === 'banda' ? 'blue' : 'gray'}
+                            variant={activeSection === 'banda' ? 'solid' : 'outline'}
+                            size={{ base: "sm", md: "md" }}
+                            px={{ base: 4, md: 6 }}
+                            fontSize={{ base: "sm", md: "md" }}
+                            _hover={{ transform: "translateY(-2px)" }}
+                        >
+                            Μπάντα
+                        </Button>
+                        <Button
+                            onClick={() => setActiveSection('theater')}
+                            colorScheme={activeSection === 'theater' ? 'blue' : 'gray'}
+                            variant={activeSection === 'theater' ? 'solid' : 'outline'}
+                            size={{ base: "sm", md: "md" }}
+                            px={{ base: 4, md: 6 }}
+                            fontSize={{ base: "sm", md: "md" }}
+                            _hover={{ transform: "translateY(-2px)" }}
+                        >
+                            Θέατρο
+                        </Button>
+                        <Button
+                            onClick={() => setActiveSection('dances')}
+                            colorScheme={activeSection === 'dances' ? 'blue' : 'gray'}
+                            variant={activeSection === 'dances' ? 'solid' : 'outline'}
+                            size={{ base: "sm", md: "md" }}
+                            px={{ base: 4, md: 6 }}
+                            fontSize={{ base: "sm", md: "md" }}
+                            _hover={{ transform: "translateY(-2px)" }}
+                        >
+                            Παραδοσιακοί Χοροί
+                        </Button>
+                    </Flex>
+
+                    {/* Content Sections */}
                     <Box
                         bg="white"
-                        borderRadius="xl"
-                        p={{ base: 6, md: 10 }}
-                        shadow="lg"
-                        border="1px"
-                        borderColor="gray.200"
+                        minH="400px"
                     >
-                        <Text
-                            fontSize={{ base: "md", md: "lg" }}
-                            lineHeight="1.8"
-                            color="gray.700"
-                            textAlign="justify"
-                            mb={6}
-                        >
-                            Οι Κατηχητικές Συνάξεις Σωτήρας ιδρύθηκαν το <Text as="span" fontWeight="bold" color="blue.600">1954</Text> από τον αείμνηστο π. Γεώργιο Ιωάννου, με όραμα να αποτελέσουν πνευματική εστία για τα παιδιά και τους νέους της κοινότητας. Από την πρώτη στιγμή της λειτουργίας τους, οι Συνάξεις είχαν διπλό σκοπό: την κατήχηση των πιστών σύμφωνα με την ορθόδοξη πίστη και παράδοση, καθώς και την ουσιαστική και δημιουργική απασχόληση των νέων μέσα σε ένα ασφαλές και υγιές περιβάλλον.
-                        </Text>
-
-                        <Text
-                            fontSize={{ base: "md", md: "lg" }}
-                            lineHeight="1.8"
-                            color="gray.700"
-                            textAlign="justify"
-                            mb={6}
-                        >
-                            Στη διάρκεια των δεκαετιών, οι Κατηχητικές Συνάξεις ανέπτυξαν πλούσια δράση, καλλιεργώντας όχι μόνο τη γνώση της πίστεως αλλά και την κοινωνικότητα, τη συνεργασία και την πολιτιστική ταυτότητα της τοπικής κοινωνίας.
-                        </Text>
-
-                        <Box mb={6}>
-                            <Heading
-                                as="h3"
-                                size={{ base: "md", md: "lg" }}
-                                mb={4}
-                                color="blue.600"
-                                fontWeight="semibold"
-                            >
-                                Οι Δραστηριότητές μας
-                            </Heading>
-
-                            <Text
-                                fontSize={{ base: "md", md: "lg" }}
-                                lineHeight="1.8"
-                                color="gray.700"
-                                textAlign="justify"
-                                mb={4}
-                            >
-                                Σήμερα, το οίκημα των Κατηχητικών Συνάξεων αποτελεί ζωντανό κέντρο δραστηριοτήτων. Φιλοξενεί:
-                            </Text>
-
-                            <Box as="ul" pl={6} color="gray.700" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
-                                <Box as="li" mb={2}>
-                                    <Text as="span" fontWeight="semibold" color="blue.600">την Κατήχηση του Σαββάτου</Text>, όπου τα παιδιά διδάσκονται τα δόγματα της Εκκλησίας και συμμετέχουν σε δημιουργικές συζητήσεις,
-                                </Box>
-                                <Box as="li" mb={2}>
-                                    <Text as="span" fontWeight="semibold" color="blue.600">το Εργαστήρι Παραδοσιακών Χορών</Text>, που μεταδίδει τη λαϊκή παράδοση από γενιά σε γενιά,
-                                </Box>
-                                <Box as="li" mb={2}>
-                                    <Text as="span" fontWeight="semibold" color="blue.600">τη μουσική μπάντα «Σημαιοφόροι Χριστού»</Text>, η οποία συνοδεύει εθνικές και θρησκευτικές εκδηλώσεις,
-                                </Box>
-                                <Box as="li" mb={2}>
-                                    <Text as="span" fontWeight="semibold" color="blue.600">το Εργαστήρι Θεάτρου</Text>, που καλλιεργεί τη δημιουργική έκφραση και την ομαδικότητα,
-                                </Box>
-                                <Box as="li" mb={2}>
-                                    <Text as="span" fontWeight="semibold" color="blue.600">την Ορχήστρα</Text>, δίνοντας στους νέους τη δυνατότητα να αναπτύξουν μουσικές δεξιότητες,
-                                </Box>
-                            </Box>
-                        </Box>
-
-                        <Text
-                            fontSize={{ base: "md", md: "lg" }}
-                            lineHeight="1.8"
-                            color="gray.700"
-                            textAlign="justify"
-                            mb={6}
-                        >
-                            Πέρα από τις τακτικές τους δραστηριότητες, οι Κατηχητικές Συνάξεις συμβάλλουν ενεργά στην κοινωνική και φιλανθρωπική ζωή της Σωτήρας. Συμμετέχουν σε εορτασμούς, εθνικές επετείους και εκκλησιαστικές εκδηλώσεις, διοργανώνουν φιλανθρωπικές δράσεις, στηρίζουν οικογένειες που έχουν ανάγκη και ενισχύουν πνευματικά την κοινότητα σε δύσκολες στιγμές.
-                        </Text>
-
-                        <Text
-                            fontSize={{ base: "md", md: "lg" }}
-                            lineHeight="1.8"
-                            color="gray.700"
-                            textAlign="justify"
-                            fontWeight="medium"
-                            fontStyle="italic"
-                        >
-                            Με τον τρόπο αυτό, οι Κατηχητικές Συνάξεις Σωτήρας συνεχίζουν να αποτελούν χώρο πνευματικής οικοδομής, πολιτιστικής καλλιέργειας και προσφοράς προς τον συνάνθρωπο, συμβάλλοντας στη διαμόρφωση της ταυτότητας και του ήθους της τοπικής κοινωνίας.
-                        </Text>
+                        {activeSection === 'about' && <AboutSection />}
+                        {activeSection === 'katixitiko' && <KatixitikoSection />}
+                        {activeSection === 'banda' && <BandSection />}
+                        {activeSection === 'theater' && <TheaterSection />}
+                        {activeSection === 'dances' && <TraditionalDancesSection />}
                     </Box>
                 </Container>
             </Box>
