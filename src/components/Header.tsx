@@ -15,7 +15,7 @@ export const Header = () => {
   const navLinks = [
     { to: "/", label: "Κεντρική", end: true },
     { to: "/schedule", label: "Πρόγραμμα" },
-    { to: "/catechetical", label: "Κατηχητικές" },
+    { to: "/catechetical", label: "Κατηχητικές Συνάξεις" },
     { to: "/churches", label: "Ναοί" },
     { to: "/contact", label: "Επικοινωνία" }
   ]
