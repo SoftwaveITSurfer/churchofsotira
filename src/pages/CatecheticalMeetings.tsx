@@ -3,17 +3,6 @@ import { Map } from "../components/Map";
 import { Box, Container, Heading, Text, Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-const catecheticalMeetings = [
-    {
-        group: "Παιδιά",
-        time: "Σάββατο Πρωί, 10:00 - 12:00",
-    },
-    {
-        group: "Ενήλικες",
-        time: "Σάββατο Βράδυ, 19:00 - 20:00",
-    },
-];
-
 const CatecheticalMeetings: React.FC = () => {
     const navigate = useNavigate();
 
