@@ -103,36 +103,31 @@ const Churches: React.FC = () => {
 
     return (
         <>
-            {/* Hero Section */}
-            <Box
-                bg="gradient-to-r"
-                bgGradient="linear(to-r, blue.600, blue.800)"
-                py={{ base: 16, md: 24 }}
-                color="white"
-            >
+            {/* Page Title Section */}
+            <Box py={{ base: 6, md: 8 }} bg="gray.50">
                 <Container maxW="4xl" textAlign="center">
                     <Heading
                         as="h1"
-                        size={{ base: "xl", md: "2xl" }}
-                        mb={4}
+                        size={{ base: "2xl", md: "3xl" }}
+                        mb={1}
                         fontWeight="bold"
+                        color="blue.700"
                     >
                         Ναοί Σωτήρας Αμμοχώστου
                     </Heading>
                     <Text
-                        fontSize={{ base: "lg", md: "xl" }}
-                        lineHeight="1.6"
-                        maxW="2xl"
+                        fontSize={{ base: "md", md: "lg" }}
+                        color="gray.600"
+                        maxW="xl"
                         mx="auto"
                     >
                         Ανακαλύψτε τους ιστορικούς ναούς και τα εκκλησιαστικά μνημεία της Σωτήρας,
-                        κάθε ένας με τη δική του μοναδική ιστορία και πνευματική κληρονομιά
-                    </Text>
+                        κάθε ένας με τη δική του μοναδική ιστορία και πνευματική κληρονομιά                   </Text>
                 </Container>
             </Box>
 
             {/* Churches Grid */}
-            <Box py={{ base: 12, md: 16 }}>
+            <Box py={{ base: 8, md: 12 }}>
                 <Container maxW="6xl">
                     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
                         {churches.map((church) => (
