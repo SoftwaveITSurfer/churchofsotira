@@ -5,9 +5,9 @@ export default function Home() {
     <>
       {/* Hero με background */}
       <Box
-        backgroundImage="url('/images/churches/metamorfosis-church-old.jpg')"
+        backgroundImage="url('/images/churches/metamorfosis-church-old-bg.jpg')"
         backgroundSize="cover"
-        backgroundPosition="center"
+        backgroundPosition="top"
         backgroundRepeat="no-repeat"
         minH={{ base: "70vh", md: "100vh" }}
         display="flex"

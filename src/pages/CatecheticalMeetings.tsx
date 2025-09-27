@@ -10,7 +10,7 @@ const CatecheticalMeetings: React.FC = () => {
         <>
             {/* Hero με background */}
             <Box
-                backgroundImage="url('/images/katixitiko/simaioforoi.jpg')"
+                backgroundImage="url('/images/katixitiko/kss-bg.jpg')"
                 backgroundSize="cover"
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
