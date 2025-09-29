@@ -46,7 +46,7 @@ const TheaterSection: React.FC = () => {
                     Τι μαθαίνουν τα παιδιά
                 </Heading>
 
-                <Box as="ul" pl={6} color="gray.700" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
                     <Box as="li" mb={2}>
                         Τεχνικές υποκριτικής και σκηνικής παρουσίας
                     </Box>

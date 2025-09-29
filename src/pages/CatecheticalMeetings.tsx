@@ -152,7 +152,7 @@ const CatecheticalMeetings: React.FC = () => {
 
                     {/* Content Sections */}
                     <Box
-                        bg="white"
+                        bg="gray.50"
                         minH="400px"
                     >
                         {activeSection === 'about' && <AboutSection />}

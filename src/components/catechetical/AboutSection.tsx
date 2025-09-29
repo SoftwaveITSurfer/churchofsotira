@@ -7,7 +7,6 @@ const AboutSection: React.FC = () => {
             <Text
                 fontSize={{ base: "md", md: "lg" }}
                 lineHeight="1.8"
-                color="gray.700"
                 textAlign="justify"
                 mb={6}
             >
@@ -17,7 +16,6 @@ const AboutSection: React.FC = () => {
             <Text
                 fontSize={{ base: "md", md: "lg" }}
                 lineHeight="1.8"
-                color="gray.700"
                 textAlign="justify"
                 mb={6}
             >
@@ -45,7 +43,7 @@ const AboutSection: React.FC = () => {
                     Σήμερα, το οίκημα των Κατηχητικών Συνάξεων αποτελεί ζωντανό κέντρο δραστηριοτήτων. Φιλοξενεί:
                 </Text>
 
-                <Box as="ul" pl={6} color="gray.700" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
                     <Box as="li" mb={2}>
                         <Text as="span" fontWeight="semibold" color="blue.600">την Κατήχηση του Σαββάτου</Text>, όπου τα παιδιά διδάσκονται τα δόγματα της Εκκλησίας και συμμετέχουν σε δημιουργικές συζητήσεις,
                     </Box>

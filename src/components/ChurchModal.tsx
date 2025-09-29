@@ -70,7 +70,7 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
             onClick={onClose}
         >
             <Box
-                bg="white"
+                bg="gray.50"
                 borderRadius="xl"
                 maxW="900px"
                 w="90%"

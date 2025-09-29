@@ -46,7 +46,7 @@ const TraditionalDancesSection: React.FC = () => {
                     Παραδοσιακοί Χοροί που διδάσκονται
                 </Heading>
 
-                <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} color="gray.700" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
                     <Box>
                         <Text fontWeight="semibold" color="blue.600" mb={1}>Κυπριακοί Χοροί:</Text>
                         <Text>• Συρτός</Text>

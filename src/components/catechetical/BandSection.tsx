@@ -46,7 +46,7 @@ const BandSection: React.FC = () => {
                     Δραστηριότητες της Μπάντας
                 </Heading>
 
-                <Box as="ul" pl={6} color="gray.700" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
                     <Box as="li" mb={2}>
                         Συνοδεία εθνικών και θρησκευτικών εορτών
                     </Box>
@@ -55,9 +55,6 @@ const BandSection: React.FC = () => {
                     </Box>
                     <Box as="li" mb={2}>
                         Μουσική υπόκρουση σε πολιτιστικές εκδηλώσεις
-                    </Box>
-                    <Box as="li" mb={2}>
-                        Εκπαίδευση νέων μουσικών σε παραδοσιακά όργανα
                     </Box>
                 </Box>
             </Box>

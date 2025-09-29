@@ -36,7 +36,7 @@ const KatixitikoSection: React.FC = () => {
                     Πρόγραμμα και Δραστηριότητες
                 </Heading>
 
-                <Box as="ul" pl={6} color="gray.700" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
                     <Box as="li" mb={2}>
                         Κάθε Σάββατο πρωί για τα παιδιά του Δημοτικού και απόγευμα για τους μεγαλύτερους.
                     </Box>
