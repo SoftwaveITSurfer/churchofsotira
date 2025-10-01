@@ -64,6 +64,64 @@ const TraditionalDancesSection: React.FC = () => {
                 </SimpleGrid>
             </Box>
 
+            <Box mb={6}>
+                <Heading
+                    as="h4"
+                    size={{ base: "md", md: "lg" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="semibold"
+                >
+                    Παραδοσιακές Φορεσιές και Κοστούμια
+                </Heading>
+
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    lineHeight="1.8"
+                    color="gray.700"
+                    textAlign="justify"
+                    mb={4}
+                >
+                    Το εργαστήρι διαθέτει πλήρη συλλογή αυθεντικών παραδοσιακών φορεσιών από όλες τις περιοχές της Κύπρου:
+                </Text>
+
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                    <Box as="li" mb={1}>Κυπριακή φορεσιά με φουστάνι και εμπλέκουμα</Box>
+                    <Box as="li" mb={1}>Ποδιά και επιμάνικα με παραδοσιακά κεντήματα</Box>
+                    <Box as="li" mb={1}>Τσαρούχια και κυπριακά κοσμήματα</Box>
+                    <Box as="li" mb={1}>Ελληνικές παραδοσιακές φορεσιές από όλα τα νησιά</Box>
+                </Box>
+            </Box>
+
+            <Box mb={6}>
+                <Heading
+                    as="h4"
+                    size={{ base: "md", md: "lg" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="semibold"
+                >
+                    Φεστιβάλ και Εκδηλώσεις
+                </Heading>
+
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    lineHeight="1.8"
+                    color="gray.700"
+                    textAlign="justify"
+                    mb={4}
+                >
+                    Το εργαστήρι συμμετέχει τακτικά σε:
+                </Text>
+
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                    <Box as="li" mb={1}>Πανκύπριο Φεστιβάλ Παραδοσιακών Χορών</Box>
+                    <Box as="li" mb={1}>Ετήσια εορτή της Κατηχητικής Συνάξεως</Box>
+                    <Box as="li" mb={1}>Εκδηλώσεις εθνικών επετείων (25η Μαρτίου, 28η Οκτωβρίου)</Box>
+                    <Box as="li" mb={1}>Αποκριάτικες και καλοκαιρινές εκδηλώσεις</Box>
+                </Box>
+            </Box>
+
             <Text
                 fontSize={{ base: "md", md: "lg" }}
                 lineHeight="1.8"

@@ -83,7 +83,7 @@ const CatecheticalMeetings: React.FC = () => {
 
             {/* Sections */}
             <Box id="about-section" py={{ base: 12, md: 16 }} bg="gray.50">
-                <Container maxW="4xl" px={{ base: 4, md: 8 }}>
+                <Container px={{ base: 4, md: 8 }}>
 
                     {/* Section Navigation Buttons */}
                     <Flex
@@ -151,10 +151,7 @@ const CatecheticalMeetings: React.FC = () => {
                     </Flex>
 
                     {/* Content Sections */}
-                    <Box
-                        bg="gray.50"
-                        minH="400px"
-                    >
+                    <Box bg="gray.50">
                         {activeSection === 'about' && <AboutSection />}
                         {activeSection === 'katixitiko' && <KatixitikoSection />}
                         {activeSection === 'banda' && <BandSection />}
@@ -164,54 +161,36 @@ const CatecheticalMeetings: React.FC = () => {
                 </Container>
             </Box>
 
-            <div style={{ maxWidth: 900, margin: "0 auto", padding: "2rem" }}>
-                <section style={{ margin: "2rem 0" }}>
-                    <Box textAlign="center" mb={8}>
-                        <Heading
-                            as="h2"
-                            size={{ base: "lg", md: "xl" }}
-                            mb={4}
-                            color="blue.600"
-                            fontWeight="bold"
-                        >
-                            Θα μας βρείτε
-                        </Heading>
-                        <Text
-                            fontSize={{ base: "md", md: "lg" }}
-                            color="gray.600"
-                            lineHeight="1.6"
-                            maxW="600px"
-                            mx="auto"
-                        >
-                            Επισκεφτείτε μας στο κτίριο των Κατηχητικών Συνάξεων στην καρδιά της Σωτήρας.
-                            Εδώ φιλοξενούνται όλες οι δραστηριότητές μας και περιμένουμε να σας υποδεχτούμε!
-                        </Text>
-                    </Box>
+            <Box textAlign="center" mt={8} mb={8} bg="gray.50">
+                <Heading
+                    as="h2"
+                    size={{ base: "lg", md: "xl" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="bold"
+                >
+                    Θα μας βρείτε
+                </Heading>
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    color="gray.600"
+                    lineHeight="1.6"
+                    maxW="600px"
+                    mx="auto"
+                >
+                    Επισκεφτείτε μας στο κτίριο των Κατηχητικών Συνάξεων στην καρδιά της Σωτήρας.
+                    Εδώ φιλοξενούνται όλες οι δραστηριότητές μας και περιμένουμε να σας υποδεχτούμε!
+                </Text>
+            </Box>
 
-                    {/* Google Maps Embed */}
-                    <Map
-                        googleMapsEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3511241010661!2d33.95238204448627!3d35.02726365609426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfcf12b33c5ed9%3A0x670a8cab4967f491!2zzpvOtc-Jz4YuIM6czrHOus6xz4HOr86_z4UgzpMgOCwgzqPPic-Ezq7Pgc6xIDUzOTAsIM6az43PgM-Bzr_Pgg!5e1!3m2!1sel!2sgr!4v1759001707547!5m2!1sel!2sgr"
-                        height="450px"
-                        markerText="Κατηχητικές Συνάξεις Σωτήρας"
-                    />
-                </section>
-
-                {/*
-                <Box textAlign="center" mt={8}>
-                    <Button
-                        onClick={() => navigate('/gallery')}
-                        colorScheme="blue"
-                        size="lg"
-                        px={8}
-                        py={4}
-                        fontSize="lg"
-                        _hover={{ transform: "translateY(-2px)", shadow: "lg" }}
-                    >
-                        Δείτε τη Συλλογή μας
-                    </Button>
-                </Box>
-                */}
-            </div>
+            <Box mb={16} px={{ base: 4, md: 0 }} bg="gray.50">
+                {/* Google Maps Embed */}
+                <Map
+                    googleMapsEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3511241010661!2d33.95238204448627!3d35.02726365609426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfcf12b33c5ed9%3A0x670a8cab4967f491!2zzpvOtc-Jz4YuIM6czrHOus6xz4HOr86_z4UgzpMgOCwgzqPPic-Ezq7Pgc6xIDUzOTAsIM6az43PgM-Bzr_Pgg!5e1!3m2!1sel!2sgr!4v1759001707547!5m2!1sel!2sgr"
+                    height="450px"
+                    markerText="Κατηχητικές Συνάξεις Σωτήρας"
+                />
+            </Box>
         </>
     );
 };

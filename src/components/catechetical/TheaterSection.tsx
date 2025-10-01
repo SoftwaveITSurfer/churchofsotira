@@ -65,6 +65,57 @@ const TheaterSection: React.FC = () => {
                 </Box>
             </Box>
 
+            <Box mb={6}>
+                <Heading
+                    as="h4"
+                    size={{ base: "md", md: "lg" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="semibold"
+                >
+                    Πρόσφατες Παραστάσεις
+                </Heading>
+
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    lineHeight="1.8"
+                    color="gray.700"
+                    textAlign="justify"
+                    mb={4}
+                >
+                    Τα τελευταία χρόνια το εργαστήρι έχει παρουσιάσει:
+                </Text>
+
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                    <Box as="li" mb={1}>"Ο Άγιος Νικόλαος" - Θρησκευτική παράσταση</Box>
+                    <Box as="li" mb={1}>"Οι Ήρωες του '21" - Ιστορικό δράμα</Box>
+                    <Box as="li" mb={1}>"Το Μήλο της Ερημού" - Κοινωνικό θέατρο</Box>
+                    <Box as="li" mb={1}>"Τα Κάλαντα των Χριστουγέννων" - Εορταστική παράσταση</Box>
+                </Box>
+            </Box>
+
+            <Box mb={6}>
+                <Heading
+                    as="h4"
+                    size={{ base: "md", md: "lg" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="semibold"
+                >
+                    Πώς να Συμμετέχετε
+                </Heading>
+
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    lineHeight="1.8"
+                    color="gray.700"
+                    textAlign="justify"
+                    mb={4}
+                >
+                    Το εργαστήρι θεάτρου δέχεται παιδιά και νέους ηλικίας 8-18 ετών. Δεν απαιτείται προηγούμενη εμπειρία - μόνο ενθουσιασμός και διάθεση για συμμετοχή! Οι πρόβες γίνονται κάθε Σάββατο απόγευμα στο κτήριο των Κατηχητικών Συνάξεων.
+                </Text>
+            </Box>
+
             <Text
                 fontSize={{ base: "md", md: "lg" }}
                 lineHeight="1.8"

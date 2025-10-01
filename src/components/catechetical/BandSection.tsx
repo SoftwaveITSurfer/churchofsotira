@@ -59,6 +59,57 @@ const BandSection: React.FC = () => {
                 </Box>
             </Box>
 
+            <Box mb={6}>
+                <Heading
+                    as="h4"
+                    size={{ base: "md", md: "lg" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="semibold"
+                >
+                    Όργανα της Μπάντας
+                </Heading>
+
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    lineHeight="1.8"
+                    color="gray.700"
+                    textAlign="justify"
+                    mb={4}
+                >
+                    Η μπάντα διαθέτει πλήρη οργανολογικό σύνολο που περιλαμβάνει χάλκινα, ξύλινα όργανα και κρουστά:
+                </Text>
+
+                <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+                    <Box as="li" mb={1}>Τρομπέτες και Κόρνα</Box>
+                    <Box as="li" mb={1}>Τρομπόνια και Τούμπα</Box>
+                    <Box as="li" mb={1}>Κλαρινέτα και Σαξόφωνα</Box>
+                    <Box as="li" mb={1}>Τύμπανα και Κρουστά</Box>
+                </Box>
+            </Box>
+
+            <Box mb={6}>
+                <Heading
+                    as="h4"
+                    size={{ base: "md", md: "lg" }}
+                    mb={4}
+                    color="blue.600"
+                    fontWeight="semibold"
+                >
+                    Επιτυχίες και Διακρίσεις
+                </Heading>
+
+                <Text
+                    fontSize={{ base: "md", md: "lg" }}
+                    lineHeight="1.8"
+                    color="gray.700"
+                    textAlign="justify"
+                    mb={4}
+                >
+                    Κατά τη διάρκεια των δεκαετιών λειτουργίας της, η μπάντα έχει λάβει αναγνώριση για την υψηλή ποιότητα των εμφανίσεών της και τη συμβολή της στην πολιτιστική ζωή της κοινότητας. Έχει συμμετάσχει σε περισσότερες από 100 επίσημες εκδηλώσεις και έχει τιμηθεί από τοπικούς φορείς για την προσφορά της.
+                </Text>
+            </Box>
+
             <Text
                 fontSize={{ base: "md", md: "lg" }}
                 lineHeight="1.8"
