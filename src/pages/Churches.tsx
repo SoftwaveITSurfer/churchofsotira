@@ -38,6 +38,59 @@ interface Church {
     features: string[];
 }
 
+// Custom Image component with loading skeleton
+const ImageWithSkeleton: React.FC<{
+    src: string;
+    alt: string;
+    w: string;
+    h: string;
+    objectFit: "cover" | "contain";
+    loading?: "lazy";
+}> = ({ src, alt, w, h, objectFit, loading }) => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
+
+    return (
+        <Box position="relative" w={w} h={h}>
+            {!imageLoaded && !imageError && (
+                <Skeleton
+                    w={w}
+                    h={h}
+                    position="absolute"
+                    top="0"
+                    left="0"
+                    borderRadius="md"
+                />
+            )}
+            <Image
+                src={src}
+                alt={alt}
+                w={w}
+                h={h}
+                objectFit={objectFit}
+                loading={loading}
+                onLoad={() => setImageLoaded(true)}
+                onError={() => setImageError(true)}
+                opacity={imageLoaded ? 1 : 0}
+                transition="opacity 0.3s ease"
+            />
+            {imageError && (
+                <Box
+                    w={w}
+                    h={h}
+                    bg="gray.100"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    color="gray.500"
+                >
+                    <Icon as={FaChurch} boxSize={8} />
+                </Box>
+            )}
+        </Box>
+    );
+};
+
 const Churches: React.FC = () => {
     const navigate = useNavigate();
     const [churches, setChurches] = useState<Church[]>([]);
@@ -144,12 +197,13 @@ const Churches: React.FC = () => {
                                     }}
                                     onClick={() => handleChurchClick(church)}
                                 >
-                                    <Image
+                                    <ImageWithSkeleton
                                         src={church.image}
                                         alt={church.name}
                                         w="full"
                                         h="220px"
                                         objectFit="cover"
+                                        loading="lazy"
                                     />
 
                                     {/* Κύριο περιεχόμενο */}
