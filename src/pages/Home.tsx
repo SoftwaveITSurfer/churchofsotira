@@ -50,16 +50,19 @@ export default function Home() {
             lineHeight="1.6"
             px={{ base: 0, md: 4 }}
           >
-            Καλώς ήρθες στην ιστοσελίδα μας. Εδώ θα βρεις τα νέα μας, τις εκδηλώσεις μας και όλες τις
-            πληροφορίες για την κοινότητά μας.
+            Καλώς ήρθες στην ιστοσελίδα μας.<br />Εδώ θα βρεις όλες τις πληροφορίες για την κοινότητά μας.
           </Text>
           <Button
-            colorScheme="blue"
+            backgroundColor="rgba(31, 41, 55, 0.8)"
             size={{ base: "md", md: "lg" }}
             px={{ base: 6, md: 8 }}
             py={{ base: 4, md: 6 }}
             fontSize={{ base: "md", md: "lg" }}
-            _hover={{ transform: "translateY(-2px)", shadow: "lg" }}
+            _hover={{
+              transform: "translateY(-2px)",
+              shadow: "lg",
+              backgroundColor: "rgba(31, 41, 55, 0.9)"
+            }}
             onClick={() => {
               document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' })
             }}

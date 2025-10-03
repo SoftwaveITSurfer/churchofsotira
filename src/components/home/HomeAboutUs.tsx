@@ -5,7 +5,7 @@ const HomeAboutUs: React.FC = () => {
     return (
         <>
             {/* About Us Section */}
-            <Box bg="gray.50" id="about-section" py={{ base: 12, md: 16 }}>
+            <Box bg="gray.50" id="about-section" py={{ base: 12, md: 16 }}  scrollMarginTop="100px">
                 <Container px={{ base: 4, md: 8 }}>
                     <Heading
                         as="h2"

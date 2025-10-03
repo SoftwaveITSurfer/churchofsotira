@@ -8,7 +8,10 @@ import {
   Grid,
   GridItem,
   Badge,
+  Icon,
 } from "@chakra-ui/react"
+import { FaCalendar } from "react-icons/fa"
+import { FiCalendar } from "react-icons/fi"
 
 // Mock data for church events
 const upcomingEvents = [
@@ -98,26 +101,13 @@ export default function Schedule() {
     <Box py={{ base: 8, md: 12 }} bg="gray.50" minH="80vh">
       <Container maxW="1000px" px={{ base: 4, md: 8 }}>
         {/* Header Section */}
-        <Box textAlign="center" mb={{ base: 8, md: 12 }}>
-          <Heading
-            as="h1"
-            size={{ base: "xl", md: "2xl" }}
-            color="blue.600"
-            mb={4}
-            lineHeight="1.2"
-          >
+        <Box textAlign="center" mb={12}>
+          <Icon as={FiCalendar} color="blue.600" boxSize={12} mb={1} />
+          <Heading as="h1" size="2xl" color="blue.600" mb={4}>
             Προγραμματισμένες Εκδηλώσεις
           </Heading>
-          <Text
-            fontSize={{ base: "md", md: "lg" }}
-            color="gray.600"
-            maxW="700px"
-            mx="auto"
-            px={{ base: 2, md: 0 }}
-            lineHeight="1.6"
-          >
+          <Text fontSize="lg" color="gray.600" maxW="680px" mx="auto">
             Δείτε τις προσεχείς εκδηλώσεις και γιορτές της εκκλησίας μας.
-            Όλοι είστε καλοδεχούμενοι να συμμετάσχετε!
           </Text>
         </Box>
 
@@ -213,14 +203,15 @@ export default function Schedule() {
               Πληροφορίες Επικοινωνίας
             </Heading>
             <VStack align="start" gap={2}>
+              {/* Not phone number yet */}
+              {/* <Text fontSize="sm" color="blue.600">
+                📞 +357 
+              </Text> */}
               <Text fontSize="sm" color="blue.600">
-                📞 +357 23 72 1234
+                📧 info@sotiraschurch.com
               </Text>
               <Text fontSize="sm" color="blue.600">
-                📧 info@churchofsotira.cy
-              </Text>
-              <Text fontSize="sm" color="blue.600">
-                📍 Κεντρική Πλατεία Αμμοχώστου
+                📍 Κεντρική Πλατεία Σωτήρας Αμμοχώστου
               </Text>
             </VStack>
           </Box>
