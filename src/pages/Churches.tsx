@@ -11,10 +11,12 @@ import {
     Button,
     Icon,
     Skeleton,
-    SkeletonText
+    SkeletonText,
+    Flex
 } from "@chakra-ui/react";
-import { FaMapMarkerAlt, FaHistory, FaStar, FaChurch } from "react-icons/fa";
+import { FaMapMarkerAlt, FaHistory, FaStar, FaChurch, FaStamp, FaOpenid } from "react-icons/fa";
 import ChurchModal from "../components/ChurchModal";
+import { FiActivity, FiCalendar, FiType } from "react-icons/fi";
 
 interface Church {
     id: string;
@@ -23,6 +25,8 @@ interface Church {
     description: string;
     period: string;
     status: string;
+    type: string;
+    celebration: string;
     image: string;
     location: {
         map: string;
@@ -120,8 +124,9 @@ const Churches: React.FC = () => {
                     <Container maxW="6xl">
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
                             {churches.map((church) => (
-                                <Box
+                                <Flex
                                     key={church.id}
+                                    direction="column"
                                     bg={bgColor}
                                     borderRadius="xl"
                                     overflow="hidden"
@@ -136,103 +141,84 @@ const Churches: React.FC = () => {
                                     }}
                                     onClick={() => handleChurchClick(church)}
                                 >
-                                    <Image
-                                        src={church.image}
-                                        alt={church.name}
-                                        w="full"
-                                        h="250px"
-                                        objectFit="cover"
-                                    />
+                                <Image
+                                    src={church.image}
+                                    alt={church.name}
+                                    w="full"
+                                    h="220px"
+                                    objectFit="cover"
+                                />
 
-                                    <Box p={6}>
-                                        <Box>
-                                            <Box w="full">
-                                                <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
-                                                    <Heading
-                                                        as="h3"
-                                                        size="md"
-                                                        color="blue.600"
-                                                        lineHeight="1.2"
-                                                    >
-                                                        {church.name}
-                                                    </Heading>
-                                                    <Badge
-                                                        colorScheme={getStatusColor(church.status)}
-                                                        variant="subtle"
-                                                        fontSize="xs"
-                                                    >
-                                                        {church.status}
-                                                    </Badge>
-                                                </Box>
-
-                                                <Text
-                                                    fontSize="sm"
-                                                    color="gray.500"
-                                                    mb={3}
-                                                    fontStyle="italic"
-                                                >
-                                                    {church.nameEn}
-                                                </Text>
-                                            </Box>
-
-                                            <Box mt={4}>
-                                                <Text
-                                                    fontSize="sm"
-                                                    color="gray.600"
-                                                    lineHeight="1.6"
-                                                    h="4.5rem"
-                                                    overflow="hidden"
-                                                >
-                                                    {church.description.length > 120
-                                                        ? `${church.description.substring(0, 120)}...`
-                                                        : church.description}
-                                                </Text>
-                                            </Box>
-
-                                            <Box mt={4} fontSize="xs" color="gray.500">
-                                                <Box display="flex" alignItems="center" mb={2}>
-                                                    <Icon as={FaHistory} mr={1} />
-                                                    <Text>{church.period}</Text>
-                                                </Box>
-                                                <Box display="flex" alignItems="center">
-                                                    <Icon as={FaMapMarkerAlt} mr={1} />
-                                                    <Text>{church.location.address}</Text>
-                                                </Box>
-                                            </Box>
-
-                                            <Box mt={4}>
-                                                <Text fontSize="xs" fontWeight="semibold" color="blue.600" mb={2}>
-                                                    Χαρακτηριστικά:
-                                                </Text>
-                                                <Box>
-                                                    {church.features.slice(0, 2).map((feature, index) => (
-                                                        <Badge
-                                                            key={index}
-                                                            size="sm"
-                                                            colorScheme="blue"
-                                                            variant="outline"
-                                                            fontSize="xs"
-                                                            mr={2}
-                                                            mb={1}
-                                                        >
-                                                            {feature}
-                                                        </Badge>
-                                                    ))}
-                                                    {church.features.length > 2 && (
-                                                        <Badge
-                                                            size="sm"
-                                                            colorScheme="gray"
-                                                            variant="outline"
-                                                            fontSize="xs"
-                                                        >
-                                                            +{church.features.length - 2}
-                                                        </Badge>
-                                                    )}
-                                                </Box>
-                                            </Box>
-                                        </Box>
+                                {/* Κύριο περιεχόμενο */}
+                                <Flex direction="column" flex="1" p={6}>
+                                    {/* Τίτλος + Τύπος */}
+                                    <Box mb={3}>
+                                    <Heading
+                                        as="h4"
+                                        size="md"
+                                        color="blue.600"
+                                        lineHeight="1.3"
+                                        mb={1}
+                                    >
+                                        {church.name}
+                                    </Heading>
+                                    <Text
+                                        fontSize="sm"
+                                        color="gray.500"
+                                        fontStyle="italic"
+                                    >
+                                        {church.nameEn}
+                                    </Text>
                                     </Box>
-                                </Box>
+
+                                    {/* Info (περίοδος & τοποθεσία) */}
+                                    <Box fontSize="xs" color="gray.500" mb={3}>
+                                        <SimpleGrid columns={2} gap={2}>
+                                                <Flex align="center">
+                                                    <Icon as={FaChurch} mr={1} />
+                                                    <Text lineClamp={1}>{church.type}</Text>
+                                                </Flex>
+                                                <Flex align="center">
+                                                    <Icon as={FaHistory} mr={1} />
+                                                    <Text lineClamp={1}>{church.period}</Text>
+                                                </Flex>
+                                                <Flex align="center">
+                                                    <Icon as={FiCalendar} mr={1} />
+                                                    <Text lineClamp={1}>{church.celebration}</Text>
+                                                </Flex>
+                                                <Flex align="center">
+                                                    <Icon as={FiActivity} mr={1} />
+                                                    <Text lineClamp={1}>{church.status}</Text>
+                                                </Flex>
+                                            </SimpleGrid>  
+                                            <Box display="flex" mt={2} alignItems="center">
+                                                <Icon as={FaMapMarkerAlt} mr={1} />
+                                                <Text lineClamp={1}>{church.location.address}</Text>
+                                            </Box>            
+                                    </Box>
+                              
+                                                  
+                                    </Flex>
+                                    {/* Footer */}
+                                    <Box p={6} pt={0}>
+                                        <Flex gap={2} w="full" justify="flex-end">
+                                            <Button size="xs"
+                                            colorScheme="blue"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                window.open(
+                                                church.location.map,
+                                                "_blank"
+                                                );
+                                            }}
+                                            >
+                                            <Icon as={FaMapMarkerAlt} mr={1} />
+                                            Οδηγίες
+                                            </Button>
+                                        </Flex>
+                                    </Box>
+                                </Flex>
+                                
                             ))}
                         </SimpleGrid>
 
