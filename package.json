@@ -4,16 +4,20 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:local": "vite",
+    "dev:network": "vite --host",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "preview:network": "vite preview --host",
     "lint": "eslint .",
     "start": "vite",
     "build:prod": "tsc -b && vite build",
     "serve:prod": "npm run build && npm run preview",
+    "serve:prod:network": "npm run build && npm run preview:network",
     "clean": "rm -rf dist",
     "type-check": "tsc --noEmit",
-    "build:watch": "tsc -b --watch"
+    "build:watch": "tsc -b --watch",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.27.0",
@@ -25,6 +29,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
+    "react-lazy-load-image-component": "^1.6.3",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.30.1"
   },
@@ -37,6 +42,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "sharp": "^0.34.4",
     "typescript": "^5.6.2",
     "vite": "^7.1.6"
   }

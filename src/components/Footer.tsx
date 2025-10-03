@@ -36,7 +36,9 @@ export const Footer = () => {
                   </Link>
                 </Text>
                 <Text mb={2}>
-                  <Link href="https://churchofcyprus.org.cy" target="_blank" rel="noopener noreferrer" fontWeight="bold" color="white" _hover={{ color: "blue.200" }}>Ιερά Μητρόπολις Κωνσταντίας και Αμμοχώστου</Link>
+                  <Link href="https://www.imconstantias.org.cy" target="_blank" rel="noopener noreferrer" fontWeight="bold" color="white" _hover={{ color: "blue.200" }}>
+                    Ιερά Μητρόπολις Κωνσταντίας και Αμμοχώστου
+                  </Link>
                 </Text>
                 <Text mb={2}>
                   <Link href="/schedule" target="_blank" rel="noopener noreferrer" fontWeight="bold" color="white" _hover={{ color: "blue.200" }}>Εκκλησιαστικό Πρόγραμμα</Link>
@@ -52,7 +54,6 @@ export const Footer = () => {
               <Heading as="h4" size="xl" mb={2}>Επικοινωνία</Heading>
               <Box fontSize="md">
                 <Text mb={1}><Icon as={FaLocationPin}/> Σωτήρας Αμμοχώστου 5390, Κύπρος</Text>
-                <Text mb={1}><Icon as={GiRotaryPhone}/> +357 24 000 000</Text>
                 <Text><Icon as={MdEmail}/> info@sotiraschurch.com</Text>
               </Box>
             </VStack>

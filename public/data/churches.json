@@ -6,8 +6,10 @@
       "nameEn": "Old Church Metamorphosis of the Savior",
       "description": "Κύριος ναός της κοινότητας, μνημείο του 16ου αιώνα κτισμένο πάνω σε θεμέλια παλαιότερης βυζαντινής βασιλικής.",
       "period": "16ος αιώνας",
+      "type": "Ιερός Ναός",
       "status": "Ενεργός",
-      "image": "/images/churches/metamorfosis-church-old.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/metamorfosis-church-old.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/8ErD5Lw6bf951MnE7",
         "address": "Κεντρική Πλατεία Σωτήρας"
@@ -20,104 +22,15 @@
       ]
     },
     {
-      "id": "agios-mamas",
-      "name": "Άγιος Μάμας",
-      "nameEn": "Saint Mamas",
-      "description": "Ιστορική εκκλησία πιθανότατα του 16ου αιώνα, αφιερωμένη στον Άγιο Μάμα, προστάτη των ζώων.",
-      "period": "16ος αιώνας",
-      "status": "Ενεργός",
-      "image": "/images/churches/agios-mamas-chapel.jpg",
-      "location": {
-        "map": "https://maps.app.goo.gl/cgSPCRXZBcYxfvWe7",
-        "address": "Περιοχή Σωτήρας"
-      },
-      "features": [
-        "Προστάτης των ζώων",
-        "Αρχιτεκτονική 16ου αιώνα",
-        "Τοπική λαϊκή λατρεία"
-      ]
-    },
-    {
-      "id": "agia-varvara",
-      "name": "Αγία Βαρβάρα",
-      "nameEn": "Saint Barbara",
-      "description": "Εκκλησία τέλους 14ου – αρχών 15ου αιώνα, αφιερωμένη στην Αγία Βαρβάρα, προστάτιδα από τους κεραυνούς.",
-      "period": "14ος-15ος αιώνας",
-      "status": "Ιστορικό μνημείο",
-      "image": "/images/churches/agia-varvara-chapel.jpg",
-      "location": {
-        "map": "https://maps.app.goo.gl/5XXAfBWidsvMm44R7?g_st=av",
-        "address": "Ανατολικά της Σωτήρας"
-      },
-      "features": [
-        "Παλαιότερο μνημείο",
-        "Προστασία από κεραυνούς",
-        "Σπάνια αρχιτεκτονική"
-      ]
-    },
-    {
-      "id": "agios-georgios",
-      "name": "Άγιος Γεώργιος",
-      "nameEn": "Saint George",
-      "description": "Εκκλησία δυτικά του χωριού που στεγάζει το Εκκλησιαστικό Μουσείο Σωτήρας με σπουδαίους θησαυρούς.",
-      "period": "Παραδοσιακή",
-      "status": "Μουσείο",
-      "image": "/images/churches/ecclesiastical-museum-agios-georgios.jpg",
-      "location": {
-        "map": "https://maps.app.goo.gl/VFkewiWkuEd5e7ns5?g_st=av",
-        "address": "Δυτικά του χωριού"
-      },
-      "features": [
-        "Εκκλησιαστικό Μουσείο",
-        "Εικόνες 15ου αιώνα",
-        "Παλαιά Ευαγγέλια",
-        "Ξύλινο τέμπλο 16ου αιώνα"
-      ]
-    },
-    {
-      "id": "panagia-chordakiotissa",
-      "name": "Παναγία η Χορδακιώτισσα",
-      "nameEn": "Panagia Chordakiotissa",
-      "description": "Ιδιαίτερα τιμώμενος ναός της περιοχής, αφιερωμένος στην Παναγία, με έντονη λαϊκή λατρεία.",
-      "period": "Παραδοσιακή",
-      "status": "Ενεργός",
-      "image": "/images/churches/panagia-chordakiotissa-chapel.jpg",
-      "location": {
-        "map": "https://maps.app.goo.gl/vcKJZFYEgJHSgA8j8?g_st=av",
-        "address": "Περιοχή Χορτάκια"
-      },
-      "features": [
-        "Ιδιαίτερη λαϊκή λατρεία",
-        "Θαυματουργός εικόνα",
-        "Ετήσιο προσκύνημα"
-      ]
-    },
-    {
-      "id": "agios-theodoros",
-      "name": "Άγιος Θεόδωρος",
-      "nameEn": "Saint Theodore",
-      "description": "Ερείπια αρχαίας εκκλησίας στη θέση Χορτάκια, μαρτυρία της πλούσιας εκκλησιαστικής κληρονομιάς της περιοχής.",
-      "period": "Βυζαντινή",
-      "status": "Ερείπια",
-      "image": "/images/churches/agios-theodoros-chapel.jpg",
-      "location": {
-        "map": "https://maps.app.goo.gl/fwYU5H7dyj9hg4gp8?g_st=av",
-        "address": "Περιοχή Χορτάκια"
-      },
-      "features": [
-        "Αρχαία εκκλησία",
-        "Βυζαντινή κληρονομιά",
-        "Αρχαιολογικό ενδιαφέρον"
-      ]
-    },
-    {
       "id": "metamorfosis-sotiros-new",
       "name": "Ι.Ν. Μεταμορφώσεως του Σωτήρος (Νέος)",
       "nameEn": "New Church Metamorphosis of the Savior",
       "description": "Ο νέος ναός της Μεταμορφώσεως του Σωτήρος, σύγχρονη εκκλησία που εξυπηρετεί τις ανάγκες της κοινότητας.",
       "period": "Σύγχρονη",
+      "type": "Ιερός Ναός",
       "status": "Ενεργός",
-      "image": "/images/churches/metamorfosis-church.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/metamorfosis-church.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/p1DHuQwzFjR2tEdDA?g_st=av",
         "address": "Σωτήρα Αμμοχώστου"
@@ -135,8 +48,10 @@
       "nameEn": "Resurrection Church",
       "description": "Εκκλησία αφιερωμένη στην Ανάσταση του Χριστού, σημαντικός ναός της κοινότητας.",
       "period": "Σύγχρονη",
+      "type": "Ιερός Ναός",
       "status": "Ενεργός",
-      "image": "/images/churches/resurrection-church.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/resurrection-church.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/WCkPCui3rdJ6uobeA?g_st=av",
         "address": "Σωτήρα Αμμοχώστου"
@@ -148,13 +63,116 @@
       ]
     },
     {
+      "id": "panagia-chordakiotissa",
+      "name": "Παναγία η Χορδακιώτισσα",
+      "nameEn": "Panagia Chordakiotissa",
+      "description": "Ιδιαίτερα τιμώμενος ναός της περιοχής, αφιερωμένος στην Παναγία, με έντονη λαϊκή λατρεία.",
+      "period": "Παραδοσιακή",
+      "type": "Ιερά Μονή",
+      "status": "Ενεργός",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/panagia-chordakiotissa-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/vcKJZFYEgJHSgA8j8?g_st=av",
+        "address": "Περιοχή Χορτάκια"
+      },
+      "features": [
+        "Ιδιαίτερη λαϊκή λατρεία",
+        "Θαυματουργός εικόνα",
+        "Ετήσιο προσκύνημα"
+      ]
+    },
+    {
+      "id": "agios-mamas",
+      "name": "Άγιος Μάμας",
+      "nameEn": "Saint Mamas",
+      "description": "Ιστορική εκκλησία πιθανότατα του 16ου αιώνα, αφιερωμένη στον Άγιο Μάμα, προστάτη των ζώων.",
+      "period": "16ος αιώνας",
+      "type": "Παρεκκλήσι",
+      "status": "Ενεργός",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agios-mamas-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/cgSPCRXZBcYxfvWe7",
+        "address": "Περιοχή Σωτήρας"
+      },
+      "features": [
+        "Προστάτης των ζώων",
+        "Αρχιτεκτονική 16ου αιώνα",
+        "Τοπική λαϊκή λατρεία"
+      ]
+    },
+    {
+      "id": "agia-varvara",
+      "name": "Αγία Βαρβάρα",
+      "nameEn": "Saint Barbara",
+      "description": "Εκκλησία τέλους 14ου – αρχών 15ου αιώνα, αφιερωμένη στην Αγία Βαρβάρα, προστάτιδα από τους κεραυνούς.",
+      "period": "14ος-15ος αιώνας",
+      "type": "Εξωκλήσι",
+      "status": "Ενεργός",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agia-varvara-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/5XXAfBWidsvMm44R7?g_st=av",
+        "address": "Ανατολικά της Σωτήρας"
+      },
+      "features": [
+        "Παλαιότερο μνημείο",
+        "Προστασία από κεραυνούς",
+        "Σπάνια αρχιτεκτονική"
+      ]
+    },
+    {
+      "id": "agios-georgios",
+      "name": "Άγιος Γεώργιος",
+      "nameEn": "Saint George",
+      "description": "Εκκλησία δυτικά του χωριού που στεγάζει το Εκκλησιαστικό Μουσείο Σωτήρας με σπουδαίους θησαυρούς.",
+      "period": "Παραδοσιακή",
+      "type": "Εξωκλήσι - Μουσείο",
+      "status": "Ενεργός",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/ecclesiastical-museum-agios-georgios.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/VFkewiWkuEd5e7ns5?g_st=av",
+        "address": "Δυτικά του χωριού"
+      },
+      "features": [
+        "Εκκλησιαστικό Μουσείο",
+        "Εικόνες 15ου αιώνα",
+        "Παλαιά Ευαγγέλια",
+        "Ξύλινο τέμπλο 16ου αιώνα"
+      ]
+    },
+    {
+      "id": "agios-theodoros",
+      "name": "Άγιος Θεόδωρος",
+      "nameEn": "Saint Theodore",
+      "description": "Ερείπια αρχαίας εκκλησίας στη θέση Χορτάκια, μαρτυρία της πλούσιας εκκλησιαστικής κληρονομιάς της περιοχής.",
+      "period": "Βυζαντινή",
+      "type": "Εξωκλήσι",
+      "status": "Ενεργός",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agios-theodoros-chapel.jpg",
+      "location": {
+        "map": "https://maps.app.goo.gl/fwYU5H7dyj9hg4gp8?g_st=av",
+        "address": "Περιοχή Χορτάκια"
+      },
+      "features": [
+        "Αρχαία εκκλησία",
+        "Βυζαντινή κληρονομιά",
+        "Αρχαιολογικό ενδιαφέρον"
+      ]
+    },
+    {
       "id": "agia-paraskevi-agioi-rafael",
       "name": "Εξωκλήσι Αγίας Παρασκευής και Αγίων Ραφαήλ Νικολάου και Ειρήνης",
       "nameEn": "Chapel of Saint Paraskevi and Saints Rafael, Nikolaos and Irene",
       "description": "Εξωκλήσι αφιερωμένο στην Αγία Παρασκευή και στους Αγίους Ραφαήλ, Νικόλαο και Ειρήνη.",
       "period": "Παραδοσιακή",
+      "type": "Εξωκλήσι",
       "status": "Ενεργός",
-      "image": "/images/churches/agia-paraskevi-chapel.png",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agia-paraskevi-chapel.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/zLC1g7bYvAq4jnVU7?g_st=av",
         "address": "Περιοχή Σωτήρας"
@@ -171,8 +189,10 @@
       "nameEn": "Chapel of Saint Nikandros",
       "description": "Εξωκλήσι αφιερωμένο στον Άγιο Νίκανδρο, σπάνια αφιέρωση στην κυπριακή εκκλησιαστική παράδοση.",
       "period": "Παραδοσιακή",
+      "type": "Εξωκλήσι",
       "status": "Ενεργός",
-      "image": "/images/churches/agios-nikandros-chapel.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agios-nikandros-chapel.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/nnBnQWqjw9rfkqHg8?g_st=ac",
         "address": "Περιοχή Σωτήρας"
@@ -189,8 +209,10 @@
       "nameEn": "Chapel of Saint Anthony (New and Old)",
       "description": "Σύμπλεγμα εξωκκλησιών του Αγίου Αντωνίου, περιλαμβάνει τόσο τον παλαιό όσο και τον νέο ναό.",
       "period": "Παραδοσιακή/Σύγχρονη",
+      "type": "Εξωκλήσι",
       "status": "Ενεργός",
-      "image": "/images/churches/agios-antonios-chapel.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agios-antonios-chapel.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/v1948pdnuhjaMH8h7?g_st=av",
         "address": "Περιοχή Σωτήρας"
@@ -208,8 +230,10 @@
       "nameEn": "Chapel of Saint Thekla",
       "description": "Εξωκλήσι αφιερωμένο στην Αγία Θέκλα, πρώτη μάρτυρα και ισαπόστολο.",
       "period": "Παραδοσιακή",
+      "type": "Εξωκλήσι",
       "status": "Ενεργός",
-      "image": "/images/churches/agia_theklas_chapel.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agia_theklas_chapel.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/1gzTu5bbaT7w4vT76?g_st=av",
         "address": "Περιοχή Σωτήρας"
@@ -226,8 +250,10 @@
       "nameEn": "Chapel of Saint George Chortakia",
       "description": "Εξωκλήσι του Αγίου Γεωργίου στην περιοχή Χορτάκια, διαφορετικό από το μουσείο Αγίου Γεωργίου.",
       "period": "Παραδοσιακή",
+      "type": "Εξωκλήσι",
       "status": "Ενεργός",
-      "image": "/images/churches/agios-georgios-chapel.jpg",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/agios-georgios-chapel.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/9n1cD6r2WEQsJ97Z7?g_st=av",
         "address": "Περιοχή Χορτάκια"
@@ -244,8 +270,10 @@
       "nameEn": "Struggle Museum and Memorial of the Fallen and Missing",
       "description": "Μουσείο αφιερωμένο στον αγώνα της ΕΟΚΑ και μνημείο προς τιμήν των πεσόντων και αγνοουμένων της Σωτήρας.",
       "period": "Σύγχρονη",
-      "status": "Μουσείο/Μνημείο",
-      "image": "/images/churches/struggle-museum-memorial.jpg",
+      "type": "Μουσείο - Μνημείο",
+      "status": "Ενεργός",
+      "celebration": "6 Αυγούστου",
+      "image": "/images/churches/optimized/struggle-museum-memorial.jpg",
       "location": {
         "map": "https://maps.app.goo.gl/GHzsrrF7KUz7yZseA?g_st=av",
         "address": "Σωτήρα Αμμοχώστου"
