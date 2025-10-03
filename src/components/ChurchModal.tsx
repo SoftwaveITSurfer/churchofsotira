@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Box,
     Image,
@@ -12,7 +12,8 @@ import {
     Grid,
     GridItem,
     CloseButton,
-    SimpleGrid
+    SimpleGrid,
+    Skeleton
 } from "@chakra-ui/react";
 import { FaMapMarkerAlt, FaHistory, FaStar, FaChurch, FaTimes } from "react-icons/fa";
 import { FiActivity, FiCalendar, FiMap } from "react-icons/fi";
@@ -41,6 +42,17 @@ interface ChurchModalProps {
 }
 
 const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
+
+    // Reset image state when church changes
+    React.useEffect(() => {
+        if (church) {
+            setImageLoaded(false);
+            setImageError(false);
+        }
+    }, [church?.id]);
+
     if (!church || !isOpen) return null;
 
     const getStatusColor = (status: string) => {
@@ -104,7 +116,14 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
                 <Box p={6}>
                     <Stack gap={6}>
                         {/* Church Image */}
-                        <Box>
+                        <Box position="relative">
+                            {!imageLoaded && !imageError && (
+                                <Skeleton
+                                    w="full"
+                                    h={["200px", null, "500px"]}
+                                    borderRadius="lg"
+                                />
+                            )}
                             <Image
                                 src={church.image}
                                 alt={church.name}
@@ -112,7 +131,26 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
                                 h={["200px", null, "500px"]} // mobile first
                                 objectFit="cover"
                                 borderRadius="lg"
+                                loading="lazy"
+                                onLoad={() => setImageLoaded(true)}
+                                onError={() => setImageError(true)}
+                                opacity={imageLoaded ? 1 : 0}
+                                transition="opacity 0.3s ease"
                             />
+                            {imageError && (
+                                <Box
+                                    w="full"
+                                    h={["200px", null, "500px"]}
+                                    bg="gray.100"
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    color="gray.500"
+                                    borderRadius="lg"
+                                >
+                                    <Icon as={FaChurch} boxSize={12} />
+                                </Box>
+                            )}
                         </Box>
 
                         {/* Basic Info Grid */}

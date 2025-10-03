@@ -1,15 +1,26 @@
-import { Box, Container, Heading, Text, Button } from "@chakra-ui/react"
+import { Box, Container, Heading, Text, Button, Skeleton } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
 import HomeAboutUs from "../components/home/HomeAboutUs"
 
 export default function Home() {
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setBackgroundLoaded(true);
+    img.src = '/images/churches/optimized/metamorfosis-church-old-bg.jpg';
+  }, []);
+
   return (
     <>
       {/* Hero με background */}
       <Box
-        backgroundImage="url('/images/churches/metamorfosis-church-old-bg.jpg')"
+        backgroundImage={backgroundLoaded ? "url('/images/churches/optimized/metamorfosis-church-old-bg.jpg')" : "none"}
+        backgroundColor={backgroundLoaded ? "transparent" : "gray.300"}
         backgroundSize="cover"
         backgroundPosition="top"
         backgroundRepeat="no-repeat"
+        transition="all 0.5s ease"
         minH={{ base: "70vh", md: "100vh" }}
         display="flex"
         alignItems="center"
