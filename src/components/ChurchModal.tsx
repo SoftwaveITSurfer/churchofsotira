@@ -11,9 +11,11 @@ import {
     Stack,
     Grid,
     GridItem,
-    CloseButton
+    CloseButton,
+    SimpleGrid
 } from "@chakra-ui/react";
-import { FaMapMarkerAlt, FaHistory, FaStar, FaCalendarAlt, FaTimes } from "react-icons/fa";
+import { FaMapMarkerAlt, FaHistory, FaStar, FaChurch, FaTimes } from "react-icons/fa";
+import { FiActivity, FiCalendar, FiMap } from "react-icons/fi";
 
 interface Church {
     id: string;
@@ -22,6 +24,8 @@ interface Church {
     description: string;
     period: string;
     status: string;
+    type: string;
+    celebration: string;
     image: string;
     location: {
         map: string;
@@ -82,7 +86,7 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
             >
                 {/* Header */}
                 <Box p={6} pb={0}>
-                    <Flex justify="space-between" align="center" wrap="wrap" gap={2}>
+                    <Flex justify="space-between" align="flex-start" gap={2}>
                         <Box>
                             <Heading as="h2" size="lg" color="blue.600" lineHeight="1.2">
                                 {church.name}
@@ -91,19 +95,9 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
                                 {church.nameEn}
                             </Text>
                         </Box>
-                        <Flex align="center" gap={3}>
-                            <Badge
-                                colorScheme={getStatusColor(church.status)}
-                                variant="subtle"
-                                fontSize="sm"
-                                px={3}
-                                py={1}
-                            >
-                                {church.status}
-                            </Badge>
-                            <CloseButton onClick={onClose} />
-                        </Flex>
+                        <CloseButton onClick={onClose} />
                     </Flex>
+
                 </Box>
 
                 {/* Body */}
@@ -115,47 +109,45 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
                                 src={church.image}
                                 alt={church.name}
                                 w="full"
-                                h="300px"
+                                h={["200px", null, "500px"]} // mobile first
                                 objectFit="cover"
                                 borderRadius="lg"
-                                shadow="md"
                             />
                         </Box>
 
                         {/* Basic Info Grid */}
-                        <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
-                            <GridItem>
-                                <Box bg="gray.50" p={4} borderRadius="lg">
-                                    <Flex align="center" mb={2}>
-                                        <Icon color="blue.500" mr={2}>
-                                            <FaCalendarAlt />
-                                        </Icon>
-                                        <Text fontWeight="semibold" fontSize="sm" color="gray.700">
-                                            Περίοδος
-                                        </Text>
-                                    </Flex>
-                                    <Text fontSize="lg" fontWeight="medium">
-                                        {church.period}
-                                    </Text>
-                                </Box>
-                            </GridItem>
+                        <Box>
+                            <Heading as="h3" size="md" mb={4} color="blue.600">
+                                Πληροφορίες
+                            </Heading>
 
-                            <GridItem>
-                                <Box bg="gray.50" p={4} borderRadius="lg">
-                                    <Flex align="center" mb={2}>
-                                        <Icon color="red.500" mr={2}>
-                                            <FaMapMarkerAlt />
-                                        </Icon>
-                                        <Text fontWeight="semibold" fontSize="sm" color="gray.700">
-                                            Τοποθεσία
-                                        </Text>
+                            {/* Info (περίοδος & τοποθεσία) */}
+                            <Box fontSize="md" color="gray.500" mb={3}>
+                                <SimpleGrid columns={2} gap={2}>
+                                    <Flex align="center">
+                                        <Icon as={FaChurch} mr={1} />
+                                        <Text lineClamp={1}>{church.type}</Text>
                                     </Flex>
-                                    <Text fontSize="lg" fontWeight="medium">
-                                        {church.location.address}
-                                    </Text>
+                                    <Flex align="center">
+                                        <Icon as={FaHistory} mr={1} />
+                                        <Text lineClamp={1}>{church.period}</Text>
+                                    </Flex>
+                                    <Flex align="center">
+                                        <Icon as={FiCalendar} mr={1} />
+                                        <Text lineClamp={1}>{church.celebration}</Text>
+                                    </Flex>
+                                    <Flex align="center">
+                                        <Icon as={FiActivity} mr={1} />
+                                        <Text lineClamp={1}>{church.status}</Text>
+                                    </Flex>
+                                </SimpleGrid>
+                                <Box display="flex" mt={2} alignItems="center">
+                                    <Icon as={FiMap} mr={1} />
+                                    <Text lineClamp={1}>{church.location.address}</Text>
                                 </Box>
-                            </GridItem>
-                        </Grid>
+                            </Box>
+
+                        </Box>
 
                         {/* Divider */}
                         <Box h="1px" bg="gray.200" />
@@ -209,6 +201,7 @@ const ChurchModal: React.FC<ChurchModalProps> = ({ church, isOpen, onClose }) =>
                             Κλείσιμο
                         </Button>
                         <Button
+                            bg="blue.600"
                             colorScheme="blue"
                             onClick={handleDirections}
                         >

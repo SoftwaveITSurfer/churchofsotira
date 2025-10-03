@@ -63,19 +63,22 @@ const CatecheticalMeetings: React.FC = () => {
                         Εδώ θα βρεις όλες τις πληροφορίες για τις Κατηχητικές Συνάξεις.
                     </Text>
                     <Button
-                        colorScheme="blue"
+                        backgroundColor="rgba(31, 41, 55, 0.8)"
                         size={{ base: "md", md: "lg" }}
                         px={{ base: 6, md: 8 }}
                         py={{ base: 4, md: 6 }}
                         fontSize={{ base: "md", md: "lg" }}
-                        _hover={{ transform: "translateY(-2px)", shadow: "lg" }}
-                        onClick={() => {
+                        _hover={{
+                            transform: "translateY(-2px)",
+                            shadow: "lg",
+                            backgroundColor: "rgba(31, 41, 55, 0.9)"
+                        }} onClick={() => {
                             document.getElementById('about-section')?.scrollIntoView({
                                 behavior: 'smooth'
                             });
                         }}
                     >
-                    Μάθε περισσότερα
+                        Μάθε περισσότερα
                     </Button>
                 </Container>
             </Box>

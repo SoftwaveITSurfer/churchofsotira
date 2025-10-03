@@ -14,9 +14,12 @@ import {
     SkeletonText,
     Flex
 } from "@chakra-ui/react";
-import { FaMapMarkerAlt, FaHistory, FaStar, FaChurch, FaStamp, FaOpenid } from "react-icons/fa";
+import { FaMapMarkerAlt, FaHistory, FaStar, FaChurch, FaStamp, FaOpenid, FaMapMarker, FaMapMarked, FaMapMarkedAlt, FaMapSigns } from "react-icons/fa";
 import ChurchModal from "../components/ChurchModal";
-import { FiActivity, FiCalendar, FiType } from "react-icons/fi";
+import { FiActivity, FiCalendar, FiMap, FiType } from "react-icons/fi";
+import { BsMapFill } from "react-icons/bs";
+import { BiMapPin } from "react-icons/bi";
+import { FaMapLocation } from "react-icons/fa6";
 
 interface Church {
     id: string;
@@ -114,7 +117,7 @@ const Churches: React.FC = () => {
                         Ναοί Σωτήρας Αμμοχώστου
                     </Heading>
                     <Text fontSize="lg" color="gray.600" maxW="680px" mx="auto">
-                        Ανακαλύψτε τους ιστορικούς ναούς και τα εκκλησιαστικά μνημεία της Σωτήρας,<br/>
+                        Ανακαλύψτε τους ιστορικούς ναούς και τα εκκλησιαστικά μνημεία της Σωτήρας,<br />
                         κάθε ένας με τη δική του μοναδική ιστορία και πνευματική κληρονομιά.
                     </Text>
                 </Box>
@@ -141,39 +144,39 @@ const Churches: React.FC = () => {
                                     }}
                                     onClick={() => handleChurchClick(church)}
                                 >
-                                <Image
-                                    src={church.image}
-                                    alt={church.name}
-                                    w="full"
-                                    h="220px"
-                                    objectFit="cover"
-                                />
+                                    <Image
+                                        src={church.image}
+                                        alt={church.name}
+                                        w="full"
+                                        h="220px"
+                                        objectFit="cover"
+                                    />
 
-                                {/* Κύριο περιεχόμενο */}
-                                <Flex direction="column" flex="1" p={6}>
-                                    {/* Τίτλος + Τύπος */}
-                                    <Box mb={3}>
-                                    <Heading
-                                        as="h4"
-                                        size="md"
-                                        color="blue.600"
-                                        lineHeight="1.3"
-                                        mb={1}
-                                    >
-                                        {church.name}
-                                    </Heading>
-                                    <Text
-                                        fontSize="sm"
-                                        color="gray.500"
-                                        fontStyle="italic"
-                                    >
-                                        {church.nameEn}
-                                    </Text>
-                                    </Box>
+                                    {/* Κύριο περιεχόμενο */}
+                                    <Flex direction="column" flex="1" p={6}>
+                                        {/* Τίτλος + Τύπος */}
+                                        <Box mb={3}>
+                                            <Heading
+                                                as="h4"
+                                                size="md"
+                                                color="blue.600"
+                                                lineHeight="1.3"
+                                                mb={1}
+                                            >
+                                                {church.name}
+                                            </Heading>
+                                            <Text
+                                                fontSize="sm"
+                                                color="gray.500"
+                                                fontStyle="italic"
+                                            >
+                                                {church.nameEn}
+                                            </Text>
+                                        </Box>
 
-                                    {/* Info (περίοδος & τοποθεσία) */}
-                                    <Box fontSize="xs" color="gray.500" mb={3}>
-                                        <SimpleGrid columns={2} gap={2}>
+                                        {/* Info (περίοδος & τοποθεσία) */}
+                                        <Box fontSize="xs" color="gray.500" mb={3}>
+                                            <SimpleGrid columns={2} gap={2}>
                                                 <Flex align="center">
                                                     <Icon as={FaChurch} mr={1} />
                                                     <Text lineClamp={1}>{church.type}</Text>
@@ -190,35 +193,36 @@ const Churches: React.FC = () => {
                                                     <Icon as={FiActivity} mr={1} />
                                                     <Text lineClamp={1}>{church.status}</Text>
                                                 </Flex>
-                                            </SimpleGrid>  
+                                            </SimpleGrid>
                                             <Box display="flex" mt={2} alignItems="center">
-                                                <Icon as={FaMapMarkerAlt} mr={1} />
+                                                <Icon as={FiMap} mr={1} />
                                                 <Text lineClamp={1}>{church.location.address}</Text>
-                                            </Box>            
-                                    </Box>
-                              
-                                                  
+                                            </Box>
+                                        </Box>
+
+
                                     </Flex>
                                     {/* Footer */}
                                     <Box p={6} pt={0}>
                                         <Flex gap={2} w="full" justify="flex-end">
                                             <Button size="xs"
-                                            colorScheme="blue"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                window.open(
-                                                church.location.map,
-                                                "_blank"
-                                                );
-                                            }}
+                                                bg="blue.600"
+                                                colorScheme="blue"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    window.open(
+                                                        church.location.map,
+                                                        "_blank"
+                                                    );
+                                                }}
                                             >
-                                            <Icon as={FaMapMarkerAlt} mr={1} />
-                                            Οδηγίες
+                                                <Icon as={FaMapMarkerAlt} mr={1} />
+                                                Οδηγίες
                                             </Button>
                                         </Flex>
                                     </Box>
                                 </Flex>
-                                
+
                             ))}
                         </SimpleGrid>
 
@@ -229,7 +233,7 @@ const Churches: React.FC = () => {
                                 Επισκεφτείτε τους ναούς μας
                             </Heading>
                             <Text fontSize="lg" color="gray.600" mb={6} maxW="2xl" mx="auto">
-                                Κάθε εκκλησία έχει τη δική της μοναδική ιστορία και πνευματική σημασία.<br/>
+                                Κάθε εκκλησία έχει τη δική της μοναδική ιστορία και πνευματική σημασία.<br />
                                 Ελάτε να τους γνωρίσετε από κοντά και να βιώσετε την πλούσια κληρονομιά μας.
                             </Text>
                         </Box>

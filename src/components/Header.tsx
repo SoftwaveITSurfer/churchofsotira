@@ -4,13 +4,16 @@ import {
   Heading,
   Container,
   Button,
-  VStack
+  VStack,
+  Icon
 } from '@chakra-ui/react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { FaTimes } from 'react-icons/fa'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
 
   const navLinks = [
     { to: "/", label: "Κεντρική", end: true },
@@ -25,17 +28,27 @@ export const Header = () => {
       to={to}
       end={end}
       onClick={onClick}
-      style={({ isActive }) => ({
-        fontWeight: isActive ? 'bold' : 'normal',
-        color: isActive ? '#2B6CB0' : '#4A5568',
-        textDecoration: 'none',
-        padding: '8px 12px',
-        borderRadius: '6px',
-        display: 'block',
-        transition: 'all 0.2s'
-      })}
+      style={{ textDecoration: 'none', display: 'block' }}
     >
-      {label}
+      {({ isActive }) => (
+        <Button
+          bg={isActive ? "blue.500" : "transparent"}
+          color={isActive ? "white" : "gray.700"}
+          px={{ base: 4, md: 6 }}
+          py={{ base: 4, md: 5 }}
+          fontSize={{ base: "sm", md: "md" }}
+          fontWeight="600"
+          transition="all 0.3s ease"
+          size="sm"
+          _hover={{
+            transform: "translateY(-2px)",
+            shadow: "md",
+            bg: isActive ? "blue.600" : "gray.200",
+          }}
+        >
+          {label}
+        </Button>
+      )}
     </NavLink>
   )
 
@@ -49,6 +62,10 @@ export const Header = () => {
             fontWeight="bold"
             color="#2B6CB0"
             flex="1"
+            cursor="pointer"
+            onClick={() => navigate('/')}
+            _hover={{ color: "#1A365D" }}
+            transition="color 0.2s"
           >
             <Box display={{ base: "block", lg: "none" }}>
               Εκκλησία Σωτήρας
@@ -76,18 +93,29 @@ export const Header = () => {
             variant="ghost"
             onClick={() => setIsOpen(!isOpen)}
             size="sm"
+            transition="all 0.3s ease"
+            _hover={{ bg: "gray.100" }}
           >
-            <Box>
-              <Box w="20px" h="2px" bg="gray.600" mb="4px" />
-              <Box w="20px" h="2px" bg="gray.600" mb="4px" />
-              <Box w="20px" h="2px" bg="gray.600" />
-            </Box>
+            {isOpen ? (
+              <Icon as={FaTimes} w={5} h={5} color="gray.600" />
+            ) : (
+              <Box>
+                <Box w="20px" h="2px" bg="gray.600" mb="4px" />
+                <Box w="20px" h="2px" bg="gray.600" mb="4px" />
+                <Box w="20px" h="2px" bg="gray.600" />
+              </Box>
+            )}
           </Button>
         </Flex>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <Box pb={4} display={{ base: "block", md: "none" }}>
+        <Box
+          maxHeight={isOpen ? "300px" : "0"}
+          overflow="hidden"
+          transition="max-height 0.3s ease-in-out"
+          display={{ base: "block", md: "none" }}
+        >
+          <Box pb={4} pt={2}>
             <VStack gap={2} align="stretch">
               {navLinks.map((link) => (
                 <NavLinkComponent
@@ -100,7 +128,7 @@ export const Header = () => {
               ))}
             </VStack>
           </Box>
-        )}
+        </Box>
       </Container>
     </Box>
   )
