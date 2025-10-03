@@ -16,19 +16,19 @@ const BandSection: React.FC = () => {
                 Μπάντα «Σημαιοφόροι Χριστού»
             </Heading>
 
-              {/* Info Cards - Έτος ίδρυσης & Τοποθεσία */}
+            {/* Info Cards - Έτος ίδρυσης & Τοποθεσία */}
             <SimpleGrid columns={{ base: 1, md: 3 }} gap={10} mb={8}>
                 <Flex
                     align="center"
                     bg="blue.50"
-                    p={3} 
-                    borderRadius="md" 
-                    borderLeft="3px solid" 
+                    p={3}
+                    borderRadius="md"
+                    borderLeft="3px solid"
                     borderColor="blue.500"
                 >
-                    <Icon as={FiCalendar} boxSize={5} color="blue.600" mr={2} /> 
+                    <Icon as={FiCalendar} boxSize={5} color="blue.600" mr={2} />
                     <Box>
-                        <Text fontSize="xs" color="gray.600" fontWeight="semibold"> 
+                        <Text fontSize="xs" color="gray.600" fontWeight="semibold">
                             Έτος ίδρυσης
                         </Text>
                         <Text fontSize="md" fontWeight="bold" color="blue.700">
@@ -39,9 +39,9 @@ const BandSection: React.FC = () => {
                 <Flex
                     align="center"
                     bg="blue.50"
-                    p={3} 
-                    borderRadius="md" 
-                    borderLeft="3px solid" 
+                    p={3}
+                    borderRadius="md"
+                    borderLeft="3px solid"
                     borderColor="blue.500"
                 >
                     <Icon as={FiActivity} boxSize={5} color="blue.600" mr={2} />
@@ -58,9 +58,9 @@ const BandSection: React.FC = () => {
                 <Flex
                     align="center"
                     bg="blue.50"
-                    p={3} 
-                    borderRadius="md" 
-                    borderLeft="3px solid" 
+                    p={3}
+                    borderRadius="md"
+                    borderLeft="3px solid"
                     borderColor="blue.500"
                 >
                     <Icon as={FiMapPin} boxSize={5} color="blue.600" mr={2} />
@@ -142,8 +142,6 @@ const BandSection: React.FC = () => {
 
                 <Box as="ul" pl={6} fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
                     <Box as="li" mb={1}>Τρομπέτες και Κόρνα</Box>
-                    <Box as="li" mb={1}>Τρομπόνια και Τούμπα</Box>
-                    <Box as="li" mb={1}>Κλαρινέτα και Σαξόφωνα</Box>
                     <Box as="li" mb={1}>Τύμπανα και Κρουστά</Box>
                 </Box>
             </Box>
