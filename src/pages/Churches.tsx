@@ -258,7 +258,18 @@ const Churches: React.FC = () => {
                                     </Flex>
                                     {/* Footer */}
                                     <Box p={6} pt={0}>
-                                        <Flex gap={2} w="full" justify="flex-end">
+                                        <Flex gap={2} w="full" justify="space-between">
+                                            <Button
+                                                size="xs"
+                                                variant="outline"
+                                                colorScheme="blue"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleChurchClick(church);
+                                                }}
+                                            >
+                                                Περισσότερα
+                                            </Button>
                                             <Button size="xs"
                                                 bg="blue.600"
                                                 colorScheme="blue"
