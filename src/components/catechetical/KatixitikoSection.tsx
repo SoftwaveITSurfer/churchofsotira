@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, Heading, Box } from "@chakra-ui/react";
+import { Text, Heading, Box, SimpleGrid, Icon, Flex } from "@chakra-ui/react";
+import { FiActivity, FiCalendar, FiMapPin } from 'react-icons/fi';
 
 const KatixitikoSection: React.FC = () => {
     return (
@@ -12,8 +13,67 @@ const KatixitikoSection: React.FC = () => {
                 fontWeight="bold"
                 textAlign="center"
             >
-                Κατηχητικές Συναντήσεις
-            </Heading>
+                Κατηχητικές Συνάξεις
+            </Heading>      
+                 
+             {/* Info Cards - Έτος ίδρυσης & Τοποθεσία */}
+            <SimpleGrid columns={{ base: 1, md: 3 }} gap={10} mb={8}>
+                <Flex
+                    align="center"
+                    bg="blue.50"
+                    p={3} 
+                    borderRadius="md" 
+                    borderLeft="3px solid" 
+                    borderColor="blue.500"
+                >
+                    <Icon as={FiCalendar} boxSize={5} color="blue.600" mr={2} /> 
+                    <Box>
+                        <Text fontSize="xs" color="gray.600" fontWeight="semibold"> 
+                            Έτος ίδρυσης
+                        </Text>
+                        <Text fontSize="md" fontWeight="bold" color="blue.700">
+                            1954
+                        </Text>
+                    </Box>
+                </Flex>
+                <Flex
+                    align="center"
+                    bg="blue.50"
+                    p={3} 
+                    borderRadius="md" 
+                    borderLeft="3px solid" 
+                    borderColor="blue.500"
+                >
+                    <Icon as={FiActivity} boxSize={5} color="blue.600" mr={2} />
+                    <Box>
+                        <Text fontSize="xs" color="gray.600" fontWeight="semibold">
+                            Χρόνια λειτουργίας
+                        </Text>
+                        <Text fontSize="md" fontWeight="bold" color="blue.700">
+                            {new Date().getFullYear() - 1954} χρόνια
+                        </Text>
+                    </Box>
+                </Flex>
+
+                <Flex
+                    align="center"
+                    bg="blue.50"
+                    p={3} 
+                    borderRadius="md" 
+                    borderLeft="3px solid" 
+                    borderColor="blue.500"
+                >
+                    <Icon as={FiMapPin} boxSize={5} color="blue.600" mr={2} />
+                    <Box>
+                        <Text fontSize="xs" color="gray.600" fontWeight="semibold">
+                            Τοποθεσία
+                        </Text>
+                        <Text fontSize="md" fontWeight="bold" color="blue.700">
+                            Κατηχητικές Συνάξεις Σωτήρας
+                        </Text>
+                    </Box>
+                </Flex>
+            </SimpleGrid>
 
             <Text
                 fontSize={{ base: "md", md: "lg" }}

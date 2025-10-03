@@ -60,8 +60,7 @@ const CatecheticalMeetings: React.FC = () => {
                         lineHeight="1.6"
                         px={{ base: 0, md: 4 }}
                     >
-                        Εδώ θα βρεις τα νέα μας, τις εκδηλώσεις μας και όλες τις
-                        πληροφορίες για τις Κατηχητικές Συνάξεις.
+                        Εδώ θα βρεις όλες τις πληροφορίες για τις Κατηχητικές Συνάξεις.
                     </Text>
                     <Button
                         colorScheme="blue"
@@ -76,82 +75,121 @@ const CatecheticalMeetings: React.FC = () => {
                             });
                         }}
                     >
-                        Μάθε περισσότερα
+                    Μάθε περισσότερα
                     </Button>
                 </Container>
             </Box>
 
             {/* Sections */}
-            <Box id="about-section" py={{ base: 12, md: 16 }} bg="gray.50">
-                <Container px={{ base: 4, md: 8 }}>
+            <Box id="about-section" py={{ base: 12, md: 16 }} bg="gray.50" scrollMarginTop="100px">
+                <Container maxW="container.xl" px={{ base: 4, md: 8 }}>
 
-                    {/* Section Navigation Buttons */}
+                    {/* Modern Pills Navigation */}
                     <Flex
                         justify="center"
-                        mb={8}
+                        mb={10}
                         wrap="wrap"
-                        gap={{ base: 2, md: 4 }}
+                        gap={{ base: 3, md: 4 }}
                         px={{ base: 2, md: 0 }}
                     >
                         <Button
-                            onClick={() => setActiveSection('about')}
-                            colorScheme={activeSection === 'about' ? 'blue' : 'gray'}
-                            variant={activeSection === 'about' ? 'solid' : 'outline'}
-                            size={{ base: "sm", md: "md" }}
-                            px={{ base: 4, md: 6 }}
+                            onClick={() => setActiveSection("about")}
+                            borderRadius="full"
+                            bg={activeSection === "about" ? "blue.500" : "gray.100"}
+                            color={activeSection === "about" ? "white" : "gray.700"}
+                            px={{ base: 5, md: 7 }}
+                            py={{ base: 5, md: 6 }}
                             fontSize={{ base: "sm", md: "md" }}
-                            _hover={{ transform: "translateY(-2px)" }}
+                            fontWeight="600"
+                            transition="all 0.3s ease"
+                            _hover={{
+                                transform: "translateY(-3px)",
+                                shadow: "md",
+                                bg: activeSection === "about" ? "blue.600" : "gray.200",
+                            }}
                         >
                             Η Ιστορία μας
                         </Button>
+
                         <Button
-                            onClick={() => setActiveSection('katixitiko')}
-                            colorScheme={activeSection === 'katixitiko' ? 'blue' : 'gray'}
-                            variant={activeSection === 'katixitiko' ? 'solid' : 'outline'}
-                            size={{ base: "sm", md: "md" }}
-                            px={{ base: 4, md: 6 }}
+                            onClick={() => setActiveSection("katixitiko")}
+                            borderRadius="full"
+                            bg={activeSection === "katixitiko" ? "blue.500" : "gray.100"}
+                            color={activeSection === "katixitiko" ? "white" : "gray.700"}
+                            px={{ base: 5, md: 7 }}
+                            py={{ base: 5, md: 6 }}
                             fontSize={{ base: "sm", md: "md" }}
-                            _hover={{ transform: "translateY(-2px)" }}
+                            fontWeight="600"
+                            transition="all 0.3s ease"
+                            _hover={{
+                                transform: "translateY(-3px)",
+                                shadow: "md",
+                                bg: activeSection === "katixitiko" ? "blue.600" : "gray.200",
+                            }}
                         >
-                            Κατηχητικό
+                            Κατηχητικές Συνάξεις
                         </Button>
+
                         <Button
-                            onClick={() => setActiveSection('banda')}
-                            colorScheme={activeSection === 'banda' ? 'blue' : 'gray'}
-                            variant={activeSection === 'banda' ? 'solid' : 'outline'}
-                            size={{ base: "sm", md: "md" }}
-                            px={{ base: 4, md: 6 }}
+                            onClick={() => setActiveSection("banda")}
+                            borderRadius="full"
+                            bg={activeSection === "banda" ? "blue.500" : "gray.100"}
+                            color={activeSection === "banda" ? "white" : "gray.700"}
+                            px={{ base: 5, md: 7 }}
+                            py={{ base: 5, md: 6 }}
                             fontSize={{ base: "sm", md: "md" }}
-                            _hover={{ transform: "translateY(-2px)" }}
+                            fontWeight="600"
+                            transition="all 0.3s ease"
+                            _hover={{
+                                transform: "translateY(-3px)",
+                                shadow: "md",
+                                bg: activeSection === "banda" ? "blue.600" : "gray.200",
+                            }}
                         >
-                            Μπάντα
+                            Μπάντα «Σημαιοφόροι Χριστού»
                         </Button>
+
                         <Button
-                            onClick={() => setActiveSection('theater')}
-                            colorScheme={activeSection === 'theater' ? 'blue' : 'gray'}
-                            variant={activeSection === 'theater' ? 'solid' : 'outline'}
-                            size={{ base: "sm", md: "md" }}
-                            px={{ base: 4, md: 6 }}
+                            onClick={() => setActiveSection("theater")}
+                            borderRadius="full"
+                            bg={activeSection === "theater" ? "blue.500" : "gray.100"}
+                            color={activeSection === "theater" ? "white" : "gray.700"}
+                            px={{ base: 5, md: 7 }}
+                            py={{ base: 5, md: 6 }}
                             fontSize={{ base: "sm", md: "md" }}
-                            _hover={{ transform: "translateY(-2px)" }}
+                            fontWeight="600"
+                            transition="all 0.3s ease"
+                            _hover={{
+                                transform: "translateY(-3px)",
+                                shadow: "md",
+                                bg: activeSection === "theater" ? "blue.600" : "gray.200",
+                            }}
                         >
-                            Θέατρο
+                            Εργαστήρι Θεάτρου
                         </Button>
+
                         <Button
-                            onClick={() => setActiveSection('dances')}
-                            colorScheme={activeSection === 'dances' ? 'blue' : 'gray'}
-                            variant={activeSection === 'dances' ? 'solid' : 'outline'}
-                            size={{ base: "sm", md: "md" }}
-                            px={{ base: 4, md: 6 }}
+                            onClick={() => setActiveSection("dances")}
+                            borderRadius="full"
+                            bg={activeSection === "dances" ? "blue.500" : "gray.100"}
+                            color={activeSection === "dances" ? "white" : "gray.700"}
+                            px={{ base: 5, md: 7 }}
+                            py={{ base: 5, md: 6 }}
                             fontSize={{ base: "sm", md: "md" }}
-                            _hover={{ transform: "translateY(-2px)" }}
+                            fontWeight="600"
+                            transition="all 0.3s ease"
+                            _hover={{
+                                transform: "translateY(-3px)",
+                                shadow: "md",
+                                bg: activeSection === "dances" ? "blue.600" : "gray.200",
+                            }}
                         >
-                            Παραδοσιακοί Χοροί
+                            Εργαστήρι Παραδοσιακών Χορών
                         </Button>
                     </Flex>
 
-                    {/* Content Sections */}
-                    <Box bg="gray.50">
+                    {/* Content Sections - No card wrapper, just content */}
+                    <Box>
                         {activeSection === 'about' && <AboutSection />}
                         {activeSection === 'katixitiko' && <KatixitikoSection />}
                         {activeSection === 'banda' && <BandSection />}
@@ -161,35 +199,41 @@ const CatecheticalMeetings: React.FC = () => {
                 </Container>
             </Box>
 
-            <Box textAlign="center" mt={8} mb={8} bg="gray.50">
-                <Heading
-                    as="h2"
-                    size={{ base: "lg", md: "xl" }}
-                    mb={4}
-                    color="blue.600"
-                    fontWeight="bold"
-                >
-                    Θα μας βρείτε
-                </Heading>
-                <Text
-                    fontSize={{ base: "md", md: "lg" }}
-                    color="gray.600"
-                    lineHeight="1.6"
-                    maxW="600px"
-                    mx="auto"
-                >
-                    Επισκεφτείτε μας στο κτίριο των Κατηχητικών Συνάξεων στην καρδιά της Σωτήρας.
-                    Εδώ φιλοξενούνται όλες οι δραστηριότητές μας και περιμένουμε να σας υποδεχτούμε!
-                </Text>
+            {/* Θα μας βρείτε Section */}
+            <Box textAlign="center" py={{ base: 12, md: 16 }} bg="white">
+                <Container maxW="container.xl">
+                    <Heading
+                        as="h2"
+                        size={{ base: "lg", md: "xl" }}
+                        mb={4}
+                        color="blue.600"
+                        fontWeight="bold"
+                    >
+                        Θα μας βρείτε
+                    </Heading>
+                    <Text
+                        fontSize={{ base: "md", md: "lg" }}
+                        color="gray.600"
+                        lineHeight="1.6"
+                        maxW="600px"
+                        mx="auto"
+                        mb={8}
+                    >
+                        Επισκεφτείτε μας στο κτίριο των Κατηχητικών Συνάξεων στην καρδιά της Σωτήρας.
+                        Εδώ φιλοξενούνται όλες οι δραστηριότητές μας και περιμένουμε να σας υποδεχτούμε!
+                    </Text>
+                </Container>
             </Box>
 
-            <Box mb={16} px={{ base: 4, md: 0 }} bg="gray.50">
-                {/* Google Maps Embed */}
-                <Map
-                    googleMapsEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3511241010661!2d33.95238204448627!3d35.02726365609426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfcf12b33c5ed9%3A0x670a8cab4967f491!2zzpvOtc-Jz4YuIM6czrHOus6xz4HOr86_z4UgzpMgOCwgzqPPic-Ezq7Pgc6xIDUzOTAsIM6az43PgM-Bzr_Pgg!5e1!3m2!1sel!2sgr!4v1759001707547!5m2!1sel!2sgr"
-                    height="450px"
-                    markerText="Κατηχητικές Συνάξεις Σωτήρας"
-                />
+            {/* Map Section */}
+            <Box bg="white" pb={16} px={{ base: 4, md: 0 }}>
+                <Container maxW="container.xl">
+                    <Map
+                        googleMapsEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3511241010661!2d33.95238204448627!3d35.02726365609426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfcf12b33c5ed9%3A0x670a8cab4967f491!2zzpvOtc-Jz4YuIM6czrHOus6xz4HOr86_z4UgzpMgOCwgzqPPic-Ezq7Pgc6xIDUzOTAsIM6az43PgM-Bzr_Pgg!5e1!3m2!1sel!2sgr!4v1759001707547!5m2!1sel!2sgr"
+                        height="450px"
+                        markerText="Κατηχητικές Συνάξεις Σωτήρας"
+                    />
+                </Container>
             </Box>
         </>
     );
